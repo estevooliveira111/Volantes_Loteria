@@ -7,7 +7,7 @@
     margin: 0;
 }
 
-.titulo{
+.titulo,.link{
     border: solid;
     margin: 4%;
     padding: 2%;
