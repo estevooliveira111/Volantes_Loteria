@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lotería</title>
 </head>
 <body>
   
@@ -20,9 +20,9 @@ echo $nome,$email,$visor;
 //    echo "<button onclick=\"myFunction3()\" id=\"myBtn3\">03</button>";
 //    echo "<button onclick=\"myFunction4()\" id=\"myBtn4\">04</button>";
 //    echo "<button onclick=\"myFunction5()\" id=\"myBtn5\">05</button>";
- //   echo "<button onclick=\"myFunction6()\" id=\"myBtn6\">06</button>";
-   // echo "<button onclick=\"myFunction7()\" id=\"myBtn7\">07</button>";
-  //  echo "<button onclick=\"myFunction8()\" id=\"myBtn8\">08</button>";
+//    echo "<button onclick=\"myFunction6()\" id=\"myBtn6\">06</button>";
+//    echo "<button onclick=\"myFunction7()\" id=\"myBtn7\">07</button>";
+//   echo "<button onclick=\"myFunction8()\" id=\"myBtn8\">08</button>";
 
     ?>" 
       
