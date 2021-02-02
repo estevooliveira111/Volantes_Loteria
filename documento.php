@@ -2,18 +2,19 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotería</title>
 </head>
 <body>
   
 <?php
 
-$nome = $_GET["nome"];
-$email = $_GET["mail"];
-$visor = $_GET["visor"];
+$nome = $_POST["nome"];
+$email = $_POST["mail"];
+$visor = $_POST["visor"];
+$data = date('d/m/Y');
+$hora = date('H:i:s');
 
-echo $nome,$email,$visor;
+
+
 
 //    echo "<button onclick=\"myFunction1()\" id=\"myBtn1\">01</button>";
 //    echo "<button onclick=\"myFunction2()\" id=\"myBtn2\">02</button>";
@@ -23,8 +24,7 @@ echo $nome,$email,$visor;
 //    echo "<button onclick=\"myFunction6()\" id=\"myBtn6\">06</button>";
 //    echo "<button onclick=\"myFunction7()\" id=\"myBtn7\">07</button>";
 //   echo "<button onclick=\"myFunction8()\" id=\"myBtn8\">08</button>";
+?>
 
-    ?>" 
-      
 </body>
 </html>
