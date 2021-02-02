@@ -16,17 +16,12 @@ div{
     margin: 4%;
 }
 
-<<<<<<< HEAD
-
-.env:hover{
-=======
 .enviar:hover{
     background-color: rgb(51, 36, 24);
     color: white;
 }
 
 .apagar:hover{
->>>>>>> 0f1cf78ec185bc62093d8e57f94de40a11f33821
     background-color: rgb(51, 36, 24);
     color: white;
 }
