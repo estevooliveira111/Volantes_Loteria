@@ -1,0 +1,32 @@
+*{
+    background-color: peachpuff;
+    color: rgb(51, 36, 24);
+    text-align: center;
+    font-size: 120%;
+    padding: 0;
+    margin: 0;
+}
+
+.titulo{
+    border: solid;
+    margin: 4%;
+    font-size: 150%;
+    padding: 2%;
+}
+.corpo{
+    border: solid;
+    font-size: 180%;
+    margin: 4%;
+}
+.boto:hover{
+    background-color: rgb(51, 36, 24);
+    color: peachpuff;
+}
+.ll,table{
+    text-align: center;
+    border: solid;
+    margin: 4%;
+}
+#um:hover,#dois:hover,#tres:hover,#quatro:hover,#cinco:hover,#seis:hover{
+    background-color: rgb(51, 36, 24);
+    color: peachpuff;}

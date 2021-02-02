@@ -1,0 +1,57 @@
+*{
+    background-color: peachpuff;
+    color: rgb(51, 36, 24);
+    text-align: center;
+    font-size: 120%;
+    padding: 0;
+    margin: 0;
+}
+
+.titulo{
+    border: solid;
+    margin: 4%;
+    padding: 2%;
+}
+
+h1{
+    font-size: 250%;
+}
+
+.documento{
+    border: solid;
+    margin: 4%;
+}
+.quadro{
+    font-size: 40%;
+}
+
+.enviar:hover{
+    background-color: rgb(51, 36, 24);
+    color: white;
+}
+
+.apagar:hover{
+    background-color: rgb(51, 36, 24);
+    color: white;
+}
+
+#base{
+    width: 40%;
+    padding: 4%;
+    margin: 0;
+}
+
+form{
+    margin: 0;
+}
+
+.base{
+    border: solid;
+    margin: 4%;
+}
+
+.ll,table{
+    text-align: center;
+    border: solid;
+    margin: 4%;
+}
