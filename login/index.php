@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/login/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
 <?php 
 	##INICIA A SESSÃO
 	session_start(); 
@@ -42,3 +52,34 @@ if(isset($_POST['env'])){
 }
 
 ?>
+
+<body>
+
+
+    
+
+    
+
+    <div>
+<br>
+
+            <h1>Login:</h1><br>
+
+<form enctype="multipart/form-data" method="post" action=""><br>
+	
+	<input type="text" placeholder="Usuario"><br><br>
+	<input type="password" name="password" placeholder="Senha"><br><br>
+	<input type="submit" name="env">
+
+</form>
+	
+
+<br>
+<br>
+<br>
+
+
+    </div>
+
+</body>
+</html>
