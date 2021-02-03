@@ -19,49 +19,13 @@
 
             <h1>Login:</h1><br>
 
-<form enctype="multipart/form-data" method="post" action=""><br>
+<form enctype="multipart/form-data" method="post" action="http://localhost/Volantes_Loteria/login/login/pagina.php"><br>
 	
 	<input type="text" placeholder="Usuario"><br><br>
 	<input type="password" name="password" placeholder="Senha"><br><br>
 	<input type="submit" name="env">
 
 </form>
-
-	
-	
-<?php
-
-		if(isset($_POST['env'])){
-
-			##SENHA PADRAO:
-			$default_password = 1234;
-			## SENHA DIGITADA
-			$password = $_POST['password'];
-
-			##VERIFICA SE A SENHA É A MESMA.
-			if( $password == $default_password ){
-
-				##CRIA A SESSÃO
-				$_SESSION['password'] = $password;
-				##REDIRECIONA
-				header("Location: pagina.php");
-
-			}else{
-				##ERRO
-				echo "Senha incorreta.";
-
-			}
-
-
-
-		}
-
-	?>
-
-
-
-		
-
 	
 
 <br>
