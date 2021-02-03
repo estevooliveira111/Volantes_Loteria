@@ -1,5 +1,6 @@
 <?php 
-	session_start(); 	##INICIA A SESSÃO
+	##INICIA A SESSÃO
+	session_start(); 
 
 	##CASO NÃO EXISTA SESSÃO RETORNA A PAGINA DE LOGIN.
 	if(!isset($_SESSION['password']) == true){
