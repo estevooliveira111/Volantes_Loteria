@@ -11,7 +11,7 @@ $banco='gerador_de_volantes';
 
 
 
-//$conexao = mysqli_connect('$server', '$usuario', '$senha', '$banco') or die('Erro ao conectar ao banco de dados');
+$conexao = mysqli_connect('$server', '$usuario', '$senha', '$banco') or die('Erro ao conectar ao banco de dados');
 
 
 ?>
