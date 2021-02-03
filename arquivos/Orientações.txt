@@ -19,6 +19,5 @@ CREATE DATABASE gerador_de_volantes;
 
 USE gerador_de_volantes;
 
-create table PESSOAS(ID_CLIENTE int not null key auto_increment,NOME char(30),email char(30),NUMEROSESCOLHIDOS float(30));
 
 create table NUMERO_DE_XML(NUMEROSDOXML DECIMAL);
