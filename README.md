@@ -2,10 +2,10 @@
 
 *Sites:*
 
-● Site Usuário;
+● Site Usuário
 
-●Login;
+● Login
 
-●
-●
-●
+● Envio de XML
+
+● Clientes Feitos
