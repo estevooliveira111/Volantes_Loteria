@@ -13,11 +13,11 @@ if(isset($_POST['env'])){
         ##CRIA A SESSÃO
         $_SESSION['password'] = $password;
         ##REDIRECIONA
-        header("Location: pagina.php");
+        header("Location: https://estevooliveira111.github.io/Volantes_Loteria/login/dados/index.html");
 
     }else{
         ##ERRO
-        echo "Senha incorreta.";
+        header("Location: https://estevooliveira111.github.io/Volantes_Loteria/login/index.html");
 
     }
 
