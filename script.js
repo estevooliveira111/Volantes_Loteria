@@ -21,3 +21,11 @@ function myFunction4() {
   var x = document.getElementById("myBtn4").textContent;
   document.getElementById("demo").innerHTML = x;  
 }
+
+const Sequelize = resire('sequerize')
+const sequelize = new Sequelize('database', 'usuariododatabase', 'password',{
+  host: "localhost",
+  dialect: mysql
+})
+
+sequelize.authenticate().then(function)

@@ -32,4 +32,28 @@
 //			echo "Nome: $n";
 //		}
 
+
+
+$server='localhost';
+$usuario='MASTERUSUARIO';
+$senha='37838691WWWww.';
+$banco='gerador_de_volantes';
+
+    //$conexao = mysqli_connect("$server", "$usuario", "$senha", "$banco") or die('Erro ao conectar ao banco de dados');
+    $conexao = mysqli_connect("$server");
+    if (mysqli_connect_errno() != 0) {
+    //echo "Erro ao acessar banco: " . mysqli_connect_error();
+    die();
+
+    mysqli_select_db("$banco") or die( 'Erro na seleção do banco' );
+
+
+    $queryone ="SELECT NUMEROSDOXML, FROM NUMEROSDOXML";
+
+        $NOME =mysqli_query($conexao,$queryone);
+
+
+}
+
+
 	?>
