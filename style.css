@@ -25,20 +25,10 @@
     margin: 4%;
 }
 
-.boto:hover{
-    background-color: rgb(51, 36, 24);
-    color: peachpuff;
-}
-
 .ll,table{
     text-align: center;
     border: solid;
     margin: 4%;
-}
-
-#um:hover,#dois:hover,#tres:hover,#quatro:hover,#cinco:hover,#seis:hover,#apagar:hover{
-    background-color: rgb(51, 36, 24);
-    color: peachpuff;
 }
 
 
@@ -47,4 +37,11 @@
     height: 100%;
 }
 
-.link{outline:none}
+#dois:hover,#tres:hover,#quatro:hover,#cinco:hover,#seis:hover,#apagar:hover{
+    background-color: rgb(51, 36, 24);
+    color: peachpuff;
+}
+
+#um:active{
+    background-color: black;
+}
