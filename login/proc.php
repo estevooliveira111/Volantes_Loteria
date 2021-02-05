@@ -8,7 +8,7 @@ if(isset($_POST['env'])){
     ## SENHA DIGITADA
     $password = $_POST['password'];
 
-    $usuariocerto=$_POST["usuario"];
+    $usuariocerto=$_POST['usuario'];
 
     ##VERIFICA SE A SENHA É A MESMA.
     if(( $password == $default_password )&&( $usuariocerto == $usuario)) {
