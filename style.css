@@ -37,11 +37,19 @@
     height: 100%;
 }
 
+.boto{
+border:peachpuff;
+}
+
 #dois:hover,#tres:hover,#quatro:hover,#cinco:hover,#seis:hover,#apagar:hover{
     background-color: rgb(51, 36, 24);
     color: peachpuff;
+    font-size: 150%;
 }
 
-#um:active{
-    background-color: black;
+#um:focus,#dois:focus,#tres:focus,#quatro:focus,#cinco:focus,#seis:focus,#apagar:focus{
+    background-color: rgb(51, 36, 24);
+    color: peachpuff;
+    border: black;
+    font-size: 180%;
 }
