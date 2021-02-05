@@ -21,15 +21,15 @@
 	// }
 
 
-	$dados = $_FILES['arquivo'];
-	var_dump($dados);
+	// $dados = $_FILES['arquivo'];
+	// var_dump($dados);
 	
-	if(!empty($_FILES['arquivo']['tmp_name'])){
-		$arquivo = new DomDocument();
-		$arquivo->load($_FILES['arquivo']['tmp_name']);
-		var_dump($arquivo);
+	// if(!empty($_FILES['arquivo']['tmp_name'])){
+	// 	$arquivo = new DomDocument();
+	// 	$arquivo->load($_FILES['arquivo']['tmp_name']);
+	// 	var_dump($arquivo);
 		
-		$linhas = $arquivo->getElementsByTagName("Row");
-		var_dump($linhas);
+	// 	$linhas = $arquivo->getElementsByTagName("Row");
+	// 	var_dump($linhas);
 
 ?>

@@ -26,6 +26,10 @@ if(isset($_POST['env'])){
 
 
 
+}else{
+    ##ERRO
+    header("Location: https://estevooliveira111.github.io/Volantes_Loteria/login/index.html");
+
 }
 
 ?>
