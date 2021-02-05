@@ -2,6 +2,7 @@
     background-color: peachpuff;
     color: rgb(51, 36, 24);
     text-align: center;
+    
     font-size: 120%;
     padding: 0;
     margin: 0;
@@ -9,6 +10,9 @@
 
 h1{
     font-size: 250%;
+    align-items: center;
+    width: 100%;
+    
 }
 
 div{
@@ -24,4 +28,7 @@ div{
 .apagar:hover{
     background-color: rgb(51, 36, 24);
     color: white;
+}
+input{
+    width: 60%;
 }

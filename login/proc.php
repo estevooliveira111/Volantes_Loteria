@@ -4,6 +4,7 @@ if(isset($_POST['env'])){
 
     //$usuario = 'Administrador';
     ##SENHA PADRAO:
+    $usuario='Administrador';
     $senhacerta = 1234;
 
     ## SENHA DIGITADA
@@ -14,14 +15,15 @@ if(isset($_POST['env'])){
     ##VERIFICA SE A SENHA É A MESMA.
     if(( $password == $senhacerta )&&( $usuariocerto == $usuario)) {
 
+
         ##CRIA A SESSÃO
         $_SESSION['password'] = $password;
         ##REDIRECIONA
-        header("Location: https://estevooliveira111.github.io/Volantes_Loteria/login/dados/index.html");
+        header("Location: http://localhost/Volantes_Loteria/dados/index.html");
 
     }else{
         ##ERRO
-        header("Location: https://estevooliveira111.github.io/Volantes_Loteria/login/index.html");
+        header("Location: http://localhost/Volantes_Loteria/login/index.html");
 
     }
 
@@ -29,7 +31,7 @@ if(isset($_POST['env'])){
 
 }else{
     ##ERRO
-    header("Location: https://estevooliveira111.github.io/Volantes_Loteria/login/index.html");
+    header("Location: http://localhost/Volantes_Loteria/login/index.html");
 
 }
 

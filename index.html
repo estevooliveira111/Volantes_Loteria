@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js"></script>    
     <title>Lotería</title>
 
 </head>
@@ -14,13 +13,13 @@
 
         <div class="letra_titulo">
 
-            <h1>Gerador de Volantes para <a class="link" href="https://estevooliveira111.github.io/Volantes_Loteria/login/index.html">L</a>otería</h1>
+            <h1>Gerador de Volantes para <a class="link" href="http://localhost/Volantes_Loteria/login/index.html">L</a>otería</h1>
 
         </div>
 
     </div>
 
-    <form method="POST" action="https://estevooliveira111.github.io/Volantes_Loteria/documento.php" name="calc">
+    <form method="POST" action="http://localhost/Volantes_Loteria/documento.php" name="calc">
 
     <div class="corpo">
 
@@ -59,7 +58,7 @@
                             <button type="reset">Apagar Jogo</button></h2>
 
                 <td>
-                    <input type="button" id="um" value=" 01" onclick="botao(value);" />
+                            <input class="boto" type="button" id="um" value=" 01" onclick="ativo" onclick="botao(value);" />
                 </td>
 
                 <td>
@@ -178,16 +177,18 @@
         
                      </table>
 
+                     <BR></BR>
 
                  <button name="enviar" type="submit">Fazer Jogo</button>
 
                  <br><br>
 
-    </form>
+    </form>      
+    
+    <script type="text/javascript" src="script.js"></script>
+    <script src="/efeitostyle.js"></script>
 
-            <button>    Nada1</button>
-<input type="text">
-        
+       <BR></BR> 
 
 
     
