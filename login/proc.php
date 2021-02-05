@@ -2,16 +2,17 @@
 
 if(isset($_POST['env'])){
 
-    $usuario = 'Administrador';
+    //$usuario = 'Administrador';
     ##SENHA PADRAO:
-    $default_password = 1234;
+    $senhacerta = 1234;
+
     ## SENHA DIGITADA
     $password = $_POST['password'];
 
     $usuariocerto=$_POST['usuario'];
 
     ##VERIFICA SE A SENHA É A MESMA.
-    if(( $password == $default_password )&&( $usuariocerto == $usuario)) {
+    if(( $password == $senhacerta )&&( $usuariocerto == $usuario)) {
 
         ##CRIA A SESSÃO
         $_SESSION['password'] = $password;
