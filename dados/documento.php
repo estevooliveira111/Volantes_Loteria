@@ -134,6 +134,11 @@ if(!empty($_FILES['arquivo']['tmp_name'])){
 			echo  "$quinquagesimooitavo ";
 			$quinquagesimonono= $linha->getElementsByTagName("Cell")->item(60)->nodeValue;
 			echo "$quinquagesimonono ";
+				// Sim, eu sei é muito código, mas foi o melhor jeito que pensei. Fiz isso fazendo somas de strings no pyton, mas pode ficar calmo que um código simples até fiz tudo em portugues para entender melho;
+
+			//Inserir o usuário no banco
+			$result_usuario = "INSERT INTO usuarios (nome, email, niveis_acesso_id) VALUES ('$nome', '$email', '$niveis_acesso_id')";
+			$resultado_usuario = mysqli_query($conn, $result_usuario);
 			
 
 		}
