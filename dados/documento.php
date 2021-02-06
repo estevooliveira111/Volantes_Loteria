@@ -15,14 +15,14 @@
 	$servidor = "localhost";
 	$usuario = "root";
 	$senha = "";
-	$dbname = "celke";
+	$dbname = "Volantes_Loteria";
 	
 	//Criar a conexao
 	$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
 	
 	$dia=date('d/m/Y');
-	$hora=date('H:i:s');
+	$hors=date('H:i:s');
 
 	echo"$dia & $hora <br/><br/>";
 
