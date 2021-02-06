@@ -44,6 +44,7 @@ if(!empty($_FILES['arquivo']['tmp_name'])){
 			echo  "$oitavo ";
 			$nono= $linha->getElementsByTagName("Cell")->item(10)->nodeValue;
 			echo "$nono ";
+
 			$decimoprimeiro= $linha->getElementsByTagName("Cell")->item(11)->nodeValue;
 			echo  "$decimoprimeiro ";
 			$decimosegundo= $linha->getElementsByTagName("Cell")->item(12)->nodeValue;
@@ -64,6 +65,7 @@ if(!empty($_FILES['arquivo']['tmp_name'])){
 			echo  "$decimonono ";
 			$vigesimoprimeiro= $linha->getElementsByTagName("Cell")->item(20)->nodeValue;
 			echo  "$vigesimoprimeiro ";
+
 			$vigesimosegundo= $linha->getElementsByTagName("Cell")->item(21)->nodeValue;
 			echo  "$vigesimosegundo ";
 			$vigesimoterceiro= $linha->getElementsByTagName("Cell")->item(22)->nodeValue;
@@ -84,6 +86,7 @@ if(!empty($_FILES['arquivo']['tmp_name'])){
 			echo  "$trigesimoprimeiro ";
 			$trigesimosegundo= $linha->getElementsByTagName("Cell")->item(30)->nodeValue;
 			echo  "$trigesimosegundo ";
+
 			$trigesimoterceiro= $linha->getElementsByTagName("Cell")->item(31)->nodeValue;
 			echo  "$trigesimoterceiro ";
 			$trigesimoquarto= $linha->getElementsByTagName("Cell")->item(32)->nodeValue;
@@ -102,28 +105,30 @@ if(!empty($_FILES['arquivo']['tmp_name'])){
 			echo  "$quadragesimoprimeiro ";
 			$quadragesimosegundo= $linha->getElementsByTagName("Cell")->item(39)->nodeValue;
 			echo  "$quadragesimosegundo ";
-			// $quadragesimoterceiro= $linha->getElementsByTagName("Cell")->item(40)->nodeValue;
-			// echo  '<br/>';
-			// $quadragesimoquarto= $linha->getElementsByTagName("Cell")->item(41)->nodeValue;
-			// echo  '<br/>';
-			// $quadragesimoquinto= $linha->getElementsByTagName("Cell")->item(42)->nodeValue;
-			// echo  '<br/>';
-			// $quadragesimosexto= $linha->getElementsByTagName("Cell")->item(43)->nodeValue;
-			// echo  '<br/>';
-			// $quadragesimosetimo= $linha->getElementsByTagName("Cell")->item(44)->nodeValue;
-			// echo  '<br/>';
-			// $quadragesimooitavo= $linha->getElementsByTagName("Cell")->item(45)->nodeValue;
-			// echo  '<br/>';
-			// $quadragesimonono= $linha->getElementsByTagName("Cell")->item(46)->nodeValue;
-			// echo  '<br/>';
-			// $quinquagesimoprimeiro= $linha->getElementsByTagName("Cell")->item(47)->nodeValue;
-			// echo  '<br/>';
-			// $quinquagesimosegundo= $linha->getElementsByTagName("Cell")->item(48)->nodeValue;
-			// echo  '<br/>';
+			$quadragesimoterceiro= $linha->getElementsByTagName("Cell")->item(40)->nodeValue;
+			echo  "$quadragesimoterceiro";
+
+			$quadragesimoquarto= $linha->getElementsByTagName("Cell")->item(41)->nodeValue;
+			echo  "$quadragesimoquarto ";
+			$quadragesimoquinto= $linha->getElementsByTagName("Cell")->item(42)->nodeValue;
+			echo  "$quadragesimoquinto ";
+			$quadragesimosexto= $linha->getElementsByTagName("Cell")->item(43)->nodeValue;
+			echo  "$quadragesimosexto ";
+			$quadragesimosetimo= $linha->getElementsByTagName("Cell")->item(44)->nodeValue;
+			echo  "$quadragesimosetimo ";
+			$quadragesimooitavo= $linha->getElementsByTagName("Cell")->item(45)->nodeValue;
+			echo  "$quadragesimooitavo ";
+			$quadragesimonono= $linha->getElementsByTagName("Cell")->item(46)->nodeValue;
+			echo  "$quadragesimonono ";
+			$quinquagesimoprimeiro= $linha->getElementsByTagName("Cell")->item(47)->nodeValue;
+			echo  "$quinquagesimoprimeiro ";
+			$quinquagesimosegundo= $linha->getElementsByTagName("Cell")->item(48)->nodeValue;
+			echo  "$quinquagesimosegundo ";
 			$quinquagesimoterceiro= $linha->getElementsByTagName("Cell")->item(49)->nodeValue;
 			echo  "$quinquagesimoterceiro ";
 			$quinquagesimoquarto= $linha->getElementsByTagName("Cell")->item(50)->nodeValue;
 			echo  "$quinquagesimoquarto ";
+
 			$quinquagesimoquinto= $linha->getElementsByTagName("Cell")->item(51)->nodeValue;
 			echo  "$quinquagesimoquinto ";
 			$quinquagesimosexto= $linha->getElementsByTagName("Cell")->item(52)->nodeValue;
@@ -134,10 +139,11 @@ if(!empty($_FILES['arquivo']['tmp_name'])){
 			echo  "$quinquagesimooitavo ";
 			$quinquagesimonono= $linha->getElementsByTagName("Cell")->item(60)->nodeValue;
 			echo "$quinquagesimonono ";
-				// Sim, eu sei é muito código, mas foi o melhor jeito que pensei. Fiz isso fazendo somas de strings no pyton, mas pode ficar calmo que um código simples até fiz tudo em portugues para entender melho;
+
+				// Sim, eu sei é muito código, mas foi o melhor jeito que pensei. Fiz isso fazendo somas de strings no Pyton, mas pode ficar calmo o código é simples, até fiz tudo em portugues para entender melhor;
 
 			//Inserir o usuário no banco
-			$result_usuario = "INSERT INTO usuarios (nome, email, niveis_acesso_id) VALUES ('$nome', '$email', '$niveis_acesso_id')";
+			$result_usuario = "INSERT INTO NUMEROS (primeirosegundo,terceiro,quarto,quinto,sexto,setimo,oitavo,nono,decimo,decimoprimeiro,decimosegundo,decimoterceiro,decimoquarto,decimoquinto,decimosexto,decimosetimo,decimooitavo,decimononovigesimo,vigesimoprimeiro,vigesimosegundo,vigesimoterceiro,vigesimoquarto,vigesimoquinto,vigesimosexto,vigesimosetimo,vigesimooitavo,vigesimonono,trigesimo,trigesimoprimeiro,trigesimosegundo,trigesimoterceiro,trigesimoquarto,trigesimoquinto,trigesimosexto,trigesimosetimo,trigesimooitavo,trigesimonono,quadragesimo,quadragesimoprimeiro,quadragesimosegundo,quadragesimoterceiro,quadragesimoquarto,quadragesimoquinto,quadragesimosexto,quadragesimooitavo,quadragesimosetimo,quadragesimooitavo,quadragesimonono,quinquagesimo,quinquagesimoprimeiro,quinquagesimosegundo,quinquagesimoterceiro,quinquagesimoquarto,quinquagesimoquinto,quinquagesimosexto,quinquagesimosetimo,quinquagesimooitavo,quinquagesimonono) VALUES ('$primeiro'$segundo','$terceiro','$quarto','$quinto','$sexto','$setimo','$oitavo','$nono','$decimo','$decimoprimeiro','$decimosegundo','$decimoterceiro','$decimoquarto','$decimoquinto','$decimosexto','$decimosetimo','$decimooitavo','$decimonono''$vigesimo','$vigesimoprimeiro','$vigesimosegundo','$vigesimoterceiro','$vigesimoquarto','$vigesimoquinto','$vigesimosexto','$vigesimosetimo','$vigesimooitavo','$vigesimonono','$trigesimo','$trigesimoprimeiro','$trigesimosegundo','$trigesimoterceiro','$trigesimoquarto','$trigesimoquinto','$trigesimosexto','$trigesimosetimo','$trigesimooitavo','$trigesimonono','$quadragesimo','$quadragesimoprimeiro','$quadragesimosegundo','$quadragesimoterceiro','$quadragesimoquarto','$quadragesimoquinto','$quadragesimosexto','$quadragesimooitavo','$quadragesimosetimo','$quadragesimooitavo','$quadragesimonono','$quinquagesimo','$quinquagesimoprimeiro','$quinquagesimosegundo','$quinquagesimoterceiro','$quinquagesimoquarto','$quinquagesimoquinto','$quinquagesimosexto','$quinquagesimosetimo','$quinquagesimooitavo','$quinquagesimonono')";
 			$resultado_usuario = mysqli_query($conn, $result_usuario);
 			
 
