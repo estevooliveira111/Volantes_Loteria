@@ -12,6 +12,15 @@
 
 <?php
 
+	$servidor = "localhost";
+	$usuario = "root";
+	$senha = "";
+	$dbname = "celke";
+	
+	//Criar a conexao
+	$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+
+
 if(!empty($_FILES['arquivo']['tmp_name'])){
 	$arquivo = new DomDocument();
 	$arquivo->load($_FILES['arquivo']['tmp_name']);
@@ -26,6 +35,9 @@ if(!empty($_FILES['arquivo']['tmp_name'])){
 	foreach($linhas as $linha){
 		if($primeira_linha == false){
 			
+
+			
+
 			$primeiro= $linha->getElementsByTagName("Cell")->item(2)->nodeValue;
 			echo  "$primeiro";
 			$segundo= $linha->getElementsByTagName("Cell")->item(3)->nodeValue;
