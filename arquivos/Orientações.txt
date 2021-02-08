@@ -21,6 +21,8 @@ USE gerador_de_volantes;
 
 create table PESSOAS(ID_CLIENTE int not null key auto_increment,NOME char(30),email char(30),NUMEROSESCOLHIDOS float(30),atad float(12),AROH float(12));
 
+SELECT PESSOAS AS "NOME","email","NUMEROSESCOLHIDOS","atad","AROH";
+
 create table NUMERO_DE_XML(NUMEROSDOXML DECIMAL);
 
 

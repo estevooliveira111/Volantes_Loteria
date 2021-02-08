@@ -50,25 +50,6 @@ $banco='gerador_de_volantes';
     mysqli_select_db('$banco') or die( 'Erro na seleção do banco' );
 
 
-    $queryone ="SELECT NOME, FROM PESSOAS";
-
-        $NOME =mysqli_query($conexao,$queryone);
-
-    $querytwo ="SELECT email FROM PESSOAS";
-
-        $email =mysqli_query($conexao,$email);
-
-    $querythree ="SELECT NUMEROSESCOLHIDOS, FROM PESSOAS";
-
-        $NUMEROSESCOLHIDOS=mysqli_query($conexao,$NUMEROSESCOLHIDOS);
-
-    $queryfive ="SELECT atad FROM PESSOAS";
-
-        $atad=mysqli_query($conexao,$atad);
-
-    $querysix = "SELECT AROH FROM PESSOAS";
-
-        $AROH=mysqli_query($conexao,$atad);
 
 }
 ?>
@@ -80,13 +61,32 @@ $banco='gerador_de_volantes';
 
 <div class='base'>
 <ul>
-    <li>Números Gerados:</li>
-    <li>ID_cliente:</li>SELECT * FROM pedidos WHERE usuario_id = $usuario_id
+    <li><?php
+    if ('SELECT * FROM pedidos WHERE ID_CLIENTE'){
 
-    <li>Nome:</li>
-    <li> E-mail:</li>
-    <li>Números Escolhidos:</li>
-    <li>Data/Hora:</li>    
+
+    $queryone ="SELECT NOME, FROM PESSOAS";
+
+    $NOME =mysqli_query($conexao,$queryone);
+
+$querytwo ="SELECT email FROM PESSOAS";
+
+    $email =mysqli_query($conexao,$email);
+
+$querythree ="SELECT NUMEROSESCOLHIDOS, FROM PESSOAS";
+
+    $NUMEROSESCOLHIDOS=mysqli_query($conexao,$NUMEROSESCOLHIDOS);
+
+$queryfive ="SELECT atad FROM PESSOAS";
+
+    $atad=mysqli_query($conexao,$atad);
+
+$querysix = "SELECT AROH FROM PESSOAS";
+
+    $AROH=mysqli_query($conexao,$atad);
+
+    };
+    ?>
 </ul>
 
 </div>
