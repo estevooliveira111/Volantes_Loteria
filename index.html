@@ -21,176 +21,59 @@
 
     <form method="POST" action="http://localhost/Volantes_Loteria/documento.php">
 
-    <div class="corpo">
+        <div class="cadastro">
 
-        <div>
-            <br>
-                <label for="name">Nome</label>
-                <input type="text" name="nome"><br><br>
+            <div>
+                <br>
+                    <label class="enpute" for="name">Nome</label>
+                    <input class="enpute" type="text" name="nome"><br><br>
                 
-                <label for="email">E-mail</label>
-                <input type="email" name="mail"><br><br>
+                    <label class="enpute" for="email">E-mail</label>
+                    <input class="enpute" type="email" name="mail"><br><br>
 
             <br><br>
 
+
+            <input class="tela" readonly="" type="text" name="visor"/><br><br>
+
+
+            <h2><button class="botão" type="">Gerar Jogo</button>
+
+                <button class="botão" type="reset">Apagar Jogo</button></h2><br><br>
+
+
+                <table class="tabela" border="1">
+
+                    <td>
+                        <input class="boto" type="button" id="um" value=" 01" onclick="ativo" onclick="botao(value);" />
+                    </td>
+
+
+                    <td>    
+                        <input class="boto" type="button" id="um" value=" 01" onclick="ativo" onclick="botao(value);" />
+                    </td>
+
+
+                    <td>
+                        <input class="boto" type="button" id="um" value=" 01" onclick="ativo" onclick="botao(value);" />
+                    </td>
+
+
+                    <td>
+                        <input class="boto" type="button" id="um" value=" 01" onclick="ativo" onclick="botao(value);" />
+                    </td>
+            
+            </table><br><br>
+
         </div>
 
-    </div>
-
-    <div>
-
-        <input readonly="" type="text" name="visor"/>
-
-
-
-    </div>
-
-    <div class="númerosfixos">
-
-        <table border="1">
-
-                <tr>              
-
-    <br><br>
-
-                            <h2><button type="submit">Gerar Jogo</button>
-
-                            <button type="reset">Apagar Jogo</button></h2>
-
-                <td>
-                            <input class="boto" type="button" id="um" value=" 01" onclick="ativo" onclick="botao(value);" />
-                </td>
-
-                <td>
-                            <input class="boto" type="button" id="dois" value=" 02" onclick="botao(value);" />
-                </td>
-
-                <td>
-                            <input class="boto" type="button" id="tres" value=" 03" onclick="botao(value);" />
-                </td>
-
-                <td>
-                            <input class="boto" type="button" id="quatro" value=" 04" onclick="botao(value);" />
-                </td>
-
-                <td>
-                            <input class="boto" type="button" id="cinco" value=" 05" onclick="botao(value);" />
-                </td>
-
-                <td>
-                             <input class="boto" type="button" id="seis" value=" 06" onclick="botao(value);" />
-                </td>
-                
-        </table>
-
-
-        <table border="1">
-
-                    <td>
-                                <input class="boto" type="button" id="um" value=" 01" onclick="botao(value);" />
-                    </td>
-    
-                    <td>
-                                <input class="boto" type="button" id="dois" value=" 02" onclick="botao(value);" />
-                    </td>
-    
-                    <td>
-                                <input class="boto" type="button" id="tres" value=" 03" onclick="botao(value);" />
-                    </td>
-    
-                    <td>
-                                <input class="boto" type="button" id="quatro" value=" 04" onclick="botao(value);" />
-                    </td>
-    
-                    <td>
-                                <input class="boto" type="button" id="cinco" value=" 05" onclick="botao(value);" />
-                    </td>
-    
-                    <td>
-                                 <input class="boto" type="button" id="seis" value=" 06" onclick="botao(value);" />
-                    </td>
-    
-                    </tr>
-    
-                 </table>
-
-                 <table border="1">
-
-                    <tr>
+        <button class="botão" type="submit">Gerar Volante </button><br><br>
         
-                    <td>
+    </form>
     
-                        <input class="boto" type="button" id="um" value=" 01" onclick="botao(value);" />
-                    </td>
     
-                    <td>
-                                <input class="boto" type="button" id="dois" value=" 02" onclick="botao(value);" />
-                    </td>
-    
-                    <td>
-                                <input class="boto" type="button" id="tres" value=" 03" onclick="botao(value);" />
-                    </td>
-    
-                    <td>
-                                <input class="boto" type="button" id="quatro" value=" 04" onclick="botao(value);" />
-                    </td>
-    
-                    <td>
-                                <input class="boto" type="button" id="cinco" value=" 05" onclick="botao(value);" />
-                    </td>
 
-                    <td>
-                        <input class="boto" type="button" id="seis" value=" 06" onclick="botao(value);" />
-                    </td>
-                    
-            </table>
-    
-    
-    
-            <table border="1">
-    
-                        <td>
-                                    <input class="boto" type="button" id="um" value=" 01" onclick="botao(value);" />
-                        </td>
-        
-                        <td>
-                                    <input class="boto" class="boto" type="button" id="dois" value=" 02" onclick="botao(value);" />
-                        </td>
-        
-                        <td>
-                                    <input class="boto" type="button" id="tres" value=" 03" onclick="botao(value);" />
-                        </td>
-        
-                        <td>
-                                    <input class="boto" type="button" id="quatro" value=" 04" onclick="botao(value);" />
-                        </td>
-        
-                        <td>
-                                    <input class="boto" type="button" id="cinco" value=" 05" onclick="botao(value);" />
-                        </td>
-        
-                        <td>
-                                     <input class="boto" type="button" id="seis" value=" 06" onclick="botao(value);" />
-                        </td>
-        
-                        </tr>
-        
-                     </table>
-
-                     <BR></BR>
-
-
-
-                     <input type="submit" value="Fazer jogo" name="submit"><label for="Fazer Jogo"></label>
-
-                 <br><br>
-
-    </form>      
-    
-    <script type="text/javascript" src="script.js"></script>
-    <script src="/efeitostyle.js"></script>
-
-       <BR></BR> 
+       
 
 
     

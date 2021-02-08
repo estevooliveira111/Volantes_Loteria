@@ -1,3 +1,4 @@
+/* Aplicado para todo site */
 *{
     background-color: peachpuff;
     color: rgb(51, 36, 24);
@@ -7,49 +8,48 @@
     margin: 0;
 }
 
+/* titulo */
+
 .letra_titulo{
-    font-size: 200%;
-    outline:none
+    font-size: 10px;
 }
 
 .titulo{
     border: solid;
     margin: 4%;
-    font-size: 150%;
     padding: 2%;
 }
 
-.corpo{
+/* Lu */
+
+.cadastro{
     border: solid;
     font-size: 170%;
     margin: 4%;
 }
 
-.ll,table{
-    text-align: center;
-    border: solid;
-    margin: 4%;
+.enpute{
+    width: 60%;
+    height: 60%;
 }
-
 
 .tela{
-    width: 100%;
-    height: 100%;
+    width: 80%;
 }
 
-.boto{
-border:peachpuff;
+/* tabelas */
+
+.tabela{
+    font-size: 50%;
+
 }
 
-#dois:hover,#tres:hover,#quatro:hover,#cinco:hover,#seis:hover,#apagar:hover{
-    background-color: rgb(51, 36, 24);
-    color: peachpuff;
-    font-size: 150%;
+td{
+float: left;
 }
 
-#um:focus,#dois:focus,#tres:focus,#quatro:focus,#cinco:focus,#seis:focus,#apagar:focus{
-    background-color: rgb(51, 36, 24);
-    color: peachpuff;
-    border: black;
-    font-size: 180%;
+/* todos botões */
+
+.botão{
+    font-size: 90%;
 }
