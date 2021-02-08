@@ -1,27 +1,46 @@
 <?php
 
-$nome= $_POST['nome'];
-$email=$_POST['email'];
-$visor=$_POST['visor'];
-$atad = date('d/m/Y');
-$AROH = date('H:i:s');
 
 $server='localhost';
-$usuario='MASTERUSUARIO';
-$senha='37838691WWWww.';
+$usuario='Root';
+$senha='..AAaa37838691';
 $banco='gerador_de_volantes';
 
-    //$conexao = mysqli_connect("$server", "$usuario", "$senha", "$banco") or die('Erro ao conectar ao banco de dados');
-    $conexao = mysqli_connect("$server", "$usuario", "$senha", "$banco");
-    if (mysqli_connect_errno() != 0) {
-    echo "Erro ao acessar banco: " . mysqli_connect_error();
-    die();
-}
+//$conexao = mysqli_connect("$server", "$usuario", "$senha", "$banco") or die('Erro ao conectar ao banco de dados');
+$conexao = mysqli_connect("$server", "$usuario", "$senha", "$banco");
 
-else{
+if (mysqli_connect_errno() != 0) {
+         echo "Erro ao acessar banco: " . mysqli_connect_error();
+         die();
+         }
 
-    $resultado_usuario= "INSERT INTO PESSOAS(NOME, email, NUMEROSESCOLHIDOS, atad, AROH) VALUES ('$nome','$email','$visor','$atad','$AROH')";
-    $resultado= mysqli_query($conexao,$resultado_usuario);
-        header("Location: .$http/index.html");
-    };
+    else{
+        if ($_POST['submit']) {
+            $nome= $_POST['nome'];
+            $visor=$_POST['visor'];
+            $email=$_POST['mail'];
+
+            $atad = date('d/m/Y');
+            $AROH = date('H:i:s');
+
+            $resultado_usuario= "INSERT INTO PESSOAS (NOME, email, NUMEROSESCOLHIDOS, atad, AROH) VALUES ('$nome','$email','$visor','$atad','$AROH')";
+            $resultado= mysqli_query($conexao,$resultado_usuario) or die (mysqli_connect_errno());
+            die;
+
+            header("Location: http://localhost/Volantes_Loteria/login/");
+
+
+        }
+
+//     if (mysqli_connect_errno() != 0) {
+//     echo "Erro ao acessar banco: " . mysqli_connect_error();
+//     ied();
+//     }
+
+// else{
+
+//     
+
+//};
+    }
 ?>
