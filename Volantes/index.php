@@ -1,57 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-<style>
-*{
-    background-color: peachpuff;
-    color: rgb(51, 36, 24);
-    text-align: center;
-    font-size: 120%;
-    padding: 0;
-    margin: 0;
-}
-
-.base{
-    border: solid;
-    margin: 4%;
-}
-
-</style>
-
-</head>
-<body>
-
-    <div class="base">
-
-
-<lo>
-    
-    <H1>Nome:</H1>
-
-    <h1> E-mail:</h1>
-    <?php echo "$email" ?>
-    
-    <h1> Números Escolhidos:</h1>
-    <?php echo "$NUMEROSESCOLHIDOS" ?>
-
-    <h1> Data/Hora:</h1>
-    <?php echo "$atad";
-    echo "$AROH" ?>
-    
-</lo>
-
-
-</div>
-    
-</body>
-</html>
- -->
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -135,7 +81,8 @@ $banco='gerador_de_volantes';
 <div class='base'>
 <ul>
     <li>Números Gerados:</li>
-    <li>ID_cliente:</li>
+    <li>ID_cliente:</li>SELECT * FROM pedidos WHERE usuario_id = $usuario_id
+
     <li>Nome:</li>
     <li> E-mail:</li>
     <li>Números Escolhidos:</li>
