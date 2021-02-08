@@ -31,16 +31,5 @@ if (mysqli_connect_errno() != 0) {
 
 
         }
-
-//     if (mysqli_connect_errno() != 0) {
-//     echo "Erro ao acessar banco: " . mysqli_connect_error();
-//     ied();
-//     }
-
-// else{
-
-//     
-
-//};
     }
 ?>
