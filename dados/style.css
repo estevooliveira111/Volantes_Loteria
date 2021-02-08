@@ -7,9 +7,14 @@
     margin: 0;
 }
 
-.titulo,.link{
+.titulo{
     border: solid;
     margin: 4%;
+    padding: 3.5%;
+}
+
+a{
+    border: solid;
     padding: 2%;
 }
 
@@ -21,6 +26,12 @@ h1{
     border: solid;
     margin: 4%;
 }
+
+.help{
+    border: solid;
+    margin: 4%;
+}
+
 .quadro{
     font-size: 40%;
 }

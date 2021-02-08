@@ -19,7 +19,7 @@ if(isset($_POST['env'])){
         ##CRIA A SESSÃO
         $_SESSION['password'] = $password;
         ##REDIRECIONA
-        header("Location: http://localhost/Volantes_Loteria/dados/index.php");
+        header("Location: http://localhost/Volantes_Loteria/dados/");
 
     }else{
         ##ERRO
