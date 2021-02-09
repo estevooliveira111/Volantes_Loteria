@@ -1,13 +1,6 @@
 <?php
 
-
-$server='localhost';
-$usuario='Root';
-$senha='..AAaa37838691';
-$banco='gerador_de_volantes';
-
-//$conexao = mysqli_connect("$server", "$usuario", "$senha", "$banco") or die('Erro ao conectar ao banco de dados');
-$conexao = mysqli_connect("$server", "$usuario", "$senha", "$banco");
+include 'conexao.php';
 
 if (mysqli_connect_errno() != 0) {
          echo "Erro ao acessar banco: " . mysqli_connect_error();

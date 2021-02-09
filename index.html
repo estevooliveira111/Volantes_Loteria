@@ -54,7 +54,7 @@
 }
 /* tabela */
 .tabela{
-    white-space: nowrap;
+    width: 90%;
 }
 table{
     margin: 4%;
@@ -64,15 +64,35 @@ table{
 table input{
     font-size: 265%;
     white-space: normal;
-
 }
 td{
     margin: 4%;
+}
+/* botões da tabela */
+
+#um:hover{
+    background-color: rgb(51, 36, 24);
+    color: peachpuff;
+    font-size: 280%;
+}
+td{
+float: left;
+}
+
+#um:focus,#dois:focus,#tres:focus,#quatro:focus,#cinco:focus,#seis:focus,#apagar:focus{
+    background-color: rgb(51, 36, 24);
+    color: peachpuff;
+    font-size: 280%;
 }
 
 /* Todos botões */
 .botão{
     font-size: 200%;
+}
+.botão:hover,.botão:focus{
+    background-color: rgb(51, 36, 24);
+    color: peachpuff;
+    font-size: 2.5em;
 }
 
     </style>
@@ -83,8 +103,8 @@ td{
 <body>
 
     <div class="I">
-            <h1>Gerador de Volantes</h1>
-            <h1>para <a class="link" href="http://localhost/Volantes_Loteria/login/index.html">L</a>otería</h1>
+            <br><h1>Gerador de Volantes</h1>
+            <h1>para <a class="link" href="http://localhost/Volantes_Loteria/login/index.html">L</a>otería</h1><br>
     </div>
         
 
@@ -94,16 +114,16 @@ td{
         <div class="II">
 
             <div class="II_i" >
-                    <br><label class="enpute" for="name">Nome:</label>
+                    <br><br><label class="enpute" for="name">Nome:</label>
                     <input class="enpute" type="text" name="nome"><br><br>
                 
                     <label class="enpute" for="email">E-mail:</label>
-                    <input class="enpute" type="email" name="mail"><br><br>
+                    <input class="enpute" type="email" name="mail"><br><br><br>
             </div>
 
             <div class="II_ii">
 
-                    <h2><br><br><input class="tela" readonly="" type="text" name="visor"/></h2>
+                    <br><h2><br><br><input class="tela" readonly="" type="text" name="visor"/></h2>
                     <br><br><button class="botão" type="reset">Apagar Jogo</button><br><br>
                     <button class="botão" type="">Gerar Jogo</button><br><br>
 
@@ -176,7 +196,7 @@ td{
     
     
 
-       
+       <!-- Formulário no metodo POST incluido campos "nome" com name="nome" e E-mail com name="mail"  -->
 
 
     
