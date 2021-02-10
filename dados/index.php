@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
     <title>Loteria</title>
+
+<!--
+    Arquivo carregado para documento "processo.php"  no metodo "method="post"
+        variáveis:
+            Arquivo  tipo:"type="file"", nome:"name="arquivo"""
+-->
+
 </head>
 <body>
 
@@ -36,7 +42,7 @@
 
     <h2>Orientação:</h2><br>
 
-    
+        <li>A planilha tem que ser enviada no formato XML:<br> <a class="link_video" href="http">Video para Exemplo<br> </a><br></li>
         <li>Antes de adicionar novos número</li><br>
         <li>Apagar os números antes adicionados</li><br>
     
@@ -46,11 +52,17 @@
 
     <div id="caixa" class="arquivocarregado">
 
-        <br><p>Arquivo carregado, botão em <strong id="verde">VERDE</strong></p><br><br>
-        
-        <p>Nenhum aquivo no servidor, botão em <strong id="vermelho">VERMELHO</strong></p><br>
+        <form action="apagar.php" method="post"></form>
 
-        <button id="butao">Botão</button><br><br>
+            <br><p>Volantes carregados, no servidor <button id="verde">botão</button> em <strong id="verde">VERDE</strong></p><br><br>
+        
+            <p>Nenhum Volantes no servidor, <button id="vermelho">botão</button> em <strong id="vermelho">VERMELHO</strong></p><br>
+
+            <button id="butao"><a class="link">Botão</a></button><br><br>
+
+            <button type="submit" id="butao"><a class="link" href="apagar.php">Apagar Número</a></button><br><br>
+
+        </form>
 
     </div>
 
@@ -59,13 +71,27 @@
 
         <div class="letra_documento">
 <br>
-                <form action="http://localhost/Volantes_Loteria/dados/documento.php" method="post" enctype="multipart/form-data"> 
+                <form action="http://localhost/Volantes_Loteria/dados/index.php" method="post" enctype="multipart/form-data"> 
                     <input id="file" type="file" name="arquivo" id="Arquivo"><br><br>
                     <input class="linkII" type="submit" value="Enviar"> 
                     <input class="linkII" type="reset" value="Apagar">
                 </form>
 <br>
         </div>
+
+    </div>
+
+    <div id='caixa'>
+
+    <?php
+
+    include 'conexao.php';
+
+    if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0){
+        $arquivo = $_FILES['arquivo'] ['name'];
+    }
+    
+    ?>
 
     </div>
 

@@ -19,16 +19,36 @@
     text-decoration: none;
 }
 
+.link_video{
+    border: solid;
+    font-size: 130%;
+    text-decoration: none;
+}
+
+.link_video:hover{
+    font-size: 150%;
+    background-color: rgb(51, 36, 24);
+    color: peachpuff;
+    text-decoration: none;
+}
+
 .letra_titulo strong{
     font-size: 55%;
 }
 
+.video{
+    border: solid;
+    margin: 3%;
+}
+
 .arquivocarregado #verde{
     color: green;
+    font-size: 120%;
 }
 
 .arquivocarregado #vermelho{
     color: red;
+    font-size: 120%;
 }
 
 #butao{
