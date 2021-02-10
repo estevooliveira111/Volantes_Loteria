@@ -18,8 +18,9 @@ a{
     padding: 2%;
 }
 
-h1{
+.letra_titulo h1{
     font-size: 250%;
+    width: 90%;
 }
 
 .documento{
