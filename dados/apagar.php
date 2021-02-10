@@ -3,13 +3,13 @@
 include 'conexao.php';
 
 if(! $conn ){
-  die('Could not connect: ' . mysql_error());
-}
+  die('Could not connect: ' . mysql_error());}
 
-    $sql = 'DELETE FROM numeros';
+$sql = 'DELETE FROM numeros';
 
 mysql_select_db('gerador_de_volantes');
-$retval = mysql_query( $sql, $conn );
+
+$retval = mysql_query( $conn, $sql );
 if(! $retval )
 {
   die('Could not delete data: ' . mysql_error());
