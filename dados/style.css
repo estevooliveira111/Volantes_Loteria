@@ -14,9 +14,10 @@
     margin: 4%;
 }
 .link{
-     border: solid;
-     text-decoration: none;
- }
+    border: solid;
+    font-size: 130%;
+    text-decoration: none;
+}
 
 .letra_titulo strong{
     font-size: 55%;
