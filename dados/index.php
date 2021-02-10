@@ -87,17 +87,35 @@
 
     include 'conexao.php';
 
-    if($conn ){
-        die('Could not connect: ' . mysql_error());}
-      
-      $sql = 'DELETE FROM numeros';
-      
-      mysqli_query($conn,$sql) or die('Erro ao acessar Banco de Dados');
-      
-      echo 'Volante  Adicionado com Sucesso';
-      
-      mysqli_close($conn);      
+    $arquiivo = $_FILES["arquivo"]["tmp_name"]; 
+    $tamanho = $_FILES["arquivo"]["size"];
+    $tipo    = $_FILES["arquivo"]["type"];
+    $nome  = $_FILES["arquivo"]["name"];
+    $titulo  = $_POST["titulo"];
+
+    if ( $arquivo != "none" ){
+    $fp = fopen($arquivo, "rb");
+    $conteudo = fread($fp, $tamanho);
+    $conteudo = addslashes($conteudo);
+    fclose($fp); 
     
+    if($conn){
+
+        $sql="INSERT INTO arquivos VALUES (0,'$nome','$titulo','$conteudo','$tipo')";
+        mysqli_query($conn,$sql) or die('Erro');
+
+        $resultado_usuario= "INSERT INTO PESSOAS (Nome, tamanho, tipo, arquivo, titulo) VALUES ('$arquiivo','$tamanho','$tipo','$nome','$titulo')";
+        $resultado= mysqli_query($conexao,$resultado_usuario) or die (mysqli_connect_errno());
+        die;
+
+    
+        mysqli_close($conn);
+        header('Location: http://localhost/Volantes_Loteria/dados/');
+    
+    } else{
+      die('Could not connect: ' . mysql_error());
+    }
+}
     ?>
 
     </div>
