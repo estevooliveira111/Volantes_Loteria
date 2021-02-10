@@ -9,22 +9,22 @@
 </head>
 <body>
 
-    <div class="titulo">
+    <div id="caixa" class="titulo">
 
         <div class="letra_titulo">
 
-            <h1>Gerador de Volantes para Loterias (CONTROLADOR)</h1>
+            <h1>Gerador de Volantes para Loterias <strong><br>(CONTROLADOR)</strong><br></h1>
 
         </div>
 
     </div>
 
 
-    <div class="titulo">_
+    <div id="caixa" class="titulo_dos_links">
 
-        <div class="letra_link">
+        <div class="letra_link"><br>
 
-            <a class="link" href="http://localhost/Volantes_Loteria/Volantes/">Volantes Gerados</a>
+            <a  class="link" href="http://localhost/Volantes_Loteria/Volantes/">Volantes Gerados</a>
 
             <a class="link" href="http://localhost/Volantes_Loteria/">Inicio</a><br><br>
             
@@ -32,7 +32,7 @@
 
     </div>
 
-    <div class="help"><br>
+    <div id="caixa" class="help"><br>
 
     <h2>Orientação:</h2><br>
 
@@ -42,17 +42,27 @@
     
         
 
-</div>
+    </div>
+
+    <div id="caixa" class="arquivocarregado">
+
+        <br><p>Arquivo carregado, botão em <strong id="verde">VERDE</strong></p><br><br>
+        
+        <p>Nenhum aquivo no servidor, botão em <strong id="vermelho">VERMELHO</strong></p><br>
+
+        <button id="butao">Botão</button><br><br>
+
+    </div>
 
 
-    <div class="documento">
+    <div id="caixa" class="documento">
 
         <div class="letra_documento">
 <br>
                 <form action="http://localhost/Volantes_Loteria/dados/documento.php" method="post" enctype="multipart/form-data"> 
-                    <input type="file" name="arquivo" id="Arquivo"><br><br>
-                    <input type="submit" value="Enviar"> 
-                    <input type="reset" value="Apagar">
+                    <input id="file" type="file" name="arquivo" id="Arquivo"><br><br>
+                    <input class="linkII" type="submit" value="Enviar"> 
+                    <input class="linkII" type="reset" value="Apagar">
                 </form>
 <br>
         </div>

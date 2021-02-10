@@ -1,69 +1,58 @@
+/* todo site*/
 *{
     background-color: peachpuff;
     color: rgb(51, 36, 24);
     text-align: center;
-    font-size: 120%;
     padding: 0;
     margin: 0;
 }
 
-.titulo{
-    border: solid;
-    margin: 4%;
-    padding: 3.5%;
-}
-
-a{
-    border: solid;
-    padding: 2%;
-}
-
-.letra_titulo h1{
-    font-size: 250%;
-    width: 90%;
-}
-
-.documento{
+/* colocar no site */
+#caixa{
+    font-size: 300%;
     border: solid;
     margin: 4%;
 }
+.link{
+     border: solid;
+     text-decoration: none;
+ }
 
-.help{
-    border: solid;
-    margin: 4%;
+.letra_titulo strong{
+    font-size: 55%;
 }
 
-.quadro{
-    font-size: 40%;
+.arquivocarregado #verde{
+    color: green;
 }
 
-.enviar:hover{
-    background-color: rgb(51, 36, 24);
+.arquivocarregado #vermelho{
+    color: red;
+}
+
+#butao{
+    font-size: 200%;
+}
+
+#butao.ativo{
+    background-color: green;
     color: white;
 }
 
-.apagar:hover{
-    background-color: rgb(51, 36, 24);
+#butao.desativado{
+    background-color: red;
     color: white;
 }
 
-#base{
-    width: 40%;
-    padding: 4%;
-    margin: 0;
+.letra_documento #file{
+    font-size: 100%;
 }
-
-form{
-    margin: 0;
+.linkII{
+    font-size: 100%;
 }
+.linkII:hover, .link:hover{
+    color: peachpuff;
+    background-color: rgb(51, 36, 24);
+    font-size: 150%;
 
-.base{
-    border: solid;
-    margin: 4%;
-}
-
-.ll,table{
-    text-align: center;
-    border: solid;
-    margin: 4%;
 }
