@@ -7,17 +7,13 @@ if(! $conn ){
 
 $sql = 'DELETE FROM numeros';
 
-mysql_select_db('gerador_de_volantes');
+mysqli_query($conn,$sql) or die('Erro ao tentar excluir registro');
 
-$retval = mysql_query( $conn, $sql );
-if(! $retval )
-{
-  die('Could not delete data: ' . mysql_error());
-}
-echo "Deleted data successfully\n";
-mysql_close($conn);
-//header('Location: http://localhost/Volantes_Loteria/dados/')
-?>
+echo 'Cliente excluído';
+
+mysqli_close($conn);
+header('Location: http://localhost/Volantes_Loteria/dados/')
+
 
 
 

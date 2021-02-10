@@ -1,4 +1,5 @@
 <?php
+
 	$servidor = "localhost";
 	$usuario = "Root";
 	$senha = "..AAaa37838691";

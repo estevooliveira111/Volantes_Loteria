@@ -4,7 +4,14 @@ if(isset($_POST['env'])){
 
     //$usuario = 'Administrador';
     ##SENHA PADRAO:
-    $usuario='Administrador';
+    $usuario='Administrador';  $retval = mysql_query( $conn, $sql );
+    if(!$retval)
+      {die('Could not delete data: ' . mysql_error());
+        }
+  
+      echo "Deleted data successfully\n";
+      mysql_close($conn);
+  
     $senhacerta = 1234;
 
     ## SENHA DIGITADA

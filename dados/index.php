@@ -73,8 +73,8 @@
 <br>
                 <form action="http://localhost/Volantes_Loteria/dados/index.php" method="post" enctype="multipart/form-data"> 
                     <input id="file" type="file" name="arquivo" id="Arquivo"><br><br>
-                    <input class="linkII" type="submit" value="Enviar"> 
-                    <input class="linkII" type="reset" value="Apagar">
+                    <input class="linkII" name="enviar" type="submit" value="Enviar"> 
+                    <input class="linkII" name="apagar" type="reset" value="Apagar">
                 </form>
 <br>
         </div>
@@ -87,9 +87,21 @@
 
     include 'conexao.php';
 
+    $Send = filter_input(INPUT_POST, 'arquivo');
+    if($Send){
+        $arquivo_nome=$_FILES['arquivo']['nane'];
+        var_dump($_FILES['arquivo']);
+
+    }else{
+        echo'Erro o enviar arquivo, verifique o formato';
+    }
+
+
     if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0){
         $arquivo = $_FILES['arquivo'] ['name'];
     }
+
+
     
     ?>
 
