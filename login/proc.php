@@ -1,18 +1,7 @@
 <?php
 
-if(isset($_POST['env'])){
-
-    //$usuario = 'Administrador';
-    ##SENHA PADRAO:
-    $usuario='Administrador';  $retval = mysql_query( $conn, $sql );
-    if(!$retval)
-      {die('Could not delete data: ' . mysql_error());
-        }
-  
-      echo "Deleted data successfully\n";
-      mysql_close($conn);
-  
-    $senhacerta = 1234;
+$usuario='Administrador';
+$senhacerta = 1234;
 
     ## SENHA DIGITADA
     $password = $_POST['password'];
@@ -21,8 +10,6 @@ if(isset($_POST['env'])){
 
     ##VERIFICA SE A SENHA É A MESMA.
     if(( $password == $senhacerta )&&( $usuariocerto == $usuario)) {
-
-
         ##CRIA A SESSÃO
         $_SESSION['password'] = $password;
         ##REDIRECIONA
@@ -33,13 +20,5 @@ if(isset($_POST['env'])){
         header("Location: http://localhost/Volantes_Loteria/login/index.html");
 
     }
-
-
-
-}else{
-    ##ERRO
-    header("Location: http://localhost/Volantes_Loteria/login/index.html");
-
-}
 
 ?>

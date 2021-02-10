@@ -87,21 +87,16 @@
 
     include 'conexao.php';
 
-    $Send = filter_input(INPUT_POST, 'arquivo');
-    if($Send){
-        $arquivo_nome=$_FILES['arquivo']['nane'];
-        var_dump($_FILES['arquivo']);
-
-    }else{
-        echo'Erro o enviar arquivo, verifique o formato';
-    }
-
-
-    if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0){
-        $arquivo = $_FILES['arquivo'] ['name'];
-    }
-
-
+    if($conn ){
+        die('Could not connect: ' . mysql_error());}
+      
+      $sql = 'DELETE FROM numeros';
+      
+      mysqli_query($conn,$sql) or die('Erro ao acessar Banco de Dados');
+      
+      echo 'Volante  Adicionado com Sucesso';
+      
+      mysqli_close($conn);      
     
     ?>
 
