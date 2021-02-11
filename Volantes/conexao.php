@@ -6,6 +6,6 @@
 	$dbname = "gerador_de_volantes";
 	
 	//Criar a conexao
-	$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+	$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);	
 
 ?>
