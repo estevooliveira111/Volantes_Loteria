@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -70,32 +73,84 @@
     <div id="caixa" class="documento">
 
         <div class="letra_documento">
-<br>
-                <form action="http://localhost/Volantes_Loteria/dados/index.php" method="post" enctype="multipart/form-data"> 
+
+
+            <br>
+                <form action="" name="form" method="post" enctype="multipart/form-data">
+                <?php if ($msg != false) echo "<div class=\"alert $class\" role=\"alert\">$msg</div>"; ?>
+                    <input type="hidden" name="enviou" value="1">
                     <input id="file" type="file" name="arquivo" id="Arquivo"><br><br>
-                    <input class="linkII" name="enviar" type="submit" value="Enviar"> 
-                    <input class="linkII" name="apagar" type="reset" value="Apagar">
-                </form>
-<br>
-        </div>
+                    <input class="btn btn-primary" id="linkII" name="enviar" type="submit" value="Enviar">
 
-    </div>
+                    
+                <div id="caixa">
 
-    <div id='caixa'>
+                <?php 
 
-    <?php
-
-    include 'conexao.php';
-
-    if ($_POST['submit']){
-        echo'lidar com arquivos';
-
+include "funcoes.php";
+ 
+$msg = false;
+ 
+if( isset($_POST['enviou']) && $_POST['enviou'] == 1 ){
+ 
+    // arquivo
+	$arquivo = $_FILES['arquivo'];
+ 
+    // Tamanho máximo do arquivo (em Bytes)
+    $tamanhoPermitido = 1024 * 1024 * 2; // 2Mb
+ 
+    //Define o diretorio para onde enviaremos o arquivo
+    $diretorio = "dados/xml/";
+ 
+    // verifica se arquivo foi enviado e sem erros
+    if( $arquivo['error'] == UPLOAD_ERR_OK ){
+ 
+        // pego a extensão do arquivo
+        $extensao = extensao($arquivo['name']);
+ 
+        // valida a extensão
+        if( in_array( $extensao, array("pdf") ) ){
+ 
+            // verifica tamanho do arquivo
+            if ( $arquivo['size'] > $tamanhoPermitido ){
+ 
+                $msg = "<strong>Aviso!</strong> O arquivo enviado é muito grande, envie arquivos de até ".$tamanhoPermitido/MB." MB.";
+                $class = "alert-warning";
+ 
+            }else{
+ 
+                // atribui novo nome ao arquivo
+                $novo_nome  = md5(time()).".".$extensao;
+ 
+                // faz o upload
+                $enviou = move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$novo_nome);
+ 
+                if($enviou){
+                    $msg = "<strong>Sucesso!</strong> Arquivo enviado corretamente.";
+                    $class = "alert-success";
+                }else{
+                    $msg = "<strong>Erro!</strong> Falha ao enviar o arquivo.";
+                    $class = "alert-danger";
+                }
+            }
+ 
+        }else{
+            $msg = "<strong>Erro!</strong> Somente arquivos PDF são permitidos.";
+            $class = "alert-danger";
+        }
+ 
     }else{
-        echo'<br/>Nenhum arquivo enviado<br/><br/>';
-
+        $msg = "<strong>Atenção!</strong> Você deve enviar um arquivo.";
+        $class = "alert-info";
     }
+}
+?>
 
-    ?>
+                </div>
+
+                </form>
+            <br>
+        </div>
 
     </div>
 

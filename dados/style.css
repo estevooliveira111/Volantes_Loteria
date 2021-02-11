@@ -85,5 +85,14 @@
     color: peachpuff;
     background-color: rgb(51, 36, 24);
     font-size: 150%;
+}
+
+.linkII{
+    font-size: 100%;
+}
+.linkII:hover, .link:hover{
+    color: peachpuff;
+    background-color: rgb(51, 36, 24);
+    font-size: 150%;
 
 }

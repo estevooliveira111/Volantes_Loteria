@@ -33,63 +33,44 @@ li{
 
 </head>
 
-
-<?php
-
-$server='localhost';
-$usuario='MASTERUSUARIO';
-$senha='37838691WWWww.';
-$banco='gerador_de_volantes';
-
-    //$conexao = mysqli_connect("$server", "$usuario", "$senha", "$banco") or die('Erro ao conectar ao banco de dados');
-    $conexao = mysqli_connect("$server", "$usuario", "$senha", "$banco");
-    if (mysqli_connect_errno() != 0) {
-    //echo "Erro ao acessar banco: " . mysqli_connect_error();
-    die();
-
-    mysqli_select_db('$banco') or die( 'Erro na seleção do banco' );
-
-
-
-}
-?>
-
-
 <body>
 
-    <h1 class="Title">Jogos feitos</h1>
+    <?php
 
-<div class='base'>
-<ul>
-    <li><?php
-    if ('SELECT * FROM pedidos WHERE ID_CLIENTE'){
-
-
-    $queryone ="SELECT NOME, FROM PESSOAS";
-
-    $NOME =mysqli_query($conexao,$queryone);
-
-$querytwo ="SELECT email FROM PESSOAS";
-
-    $email =mysqli_query($conexao,$email);
-
-$querythree ="SELECT NUMEROSESCOLHIDOS, FROM PESSOAS";
-
-    $NUMEROSESCOLHIDOS=mysqli_query($conexao,$NUMEROSESCOLHIDOS);
-
-$queryfive ="SELECT atad FROM PESSOAS";
-
-    $atad=mysqli_query($conexao,$atad);
-
-$querysix = "SELECT AROH FROM PESSOAS";
-
-    $AROH=mysqli_query($conexao,$atad);
-
-    };
+        include 'conexao.php';
+    
     ?>
-</ul>
 
-</div>
+    <h1 class="Title">Volantes Gerados</h1>
+
+    <div class="base">
+        <?php
+
+    if (!$conn) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
+    }else{
+
+    echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+    echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
+    echo "Conectou com sucesso";
+
+
+
+
+    
+    mysqli_close($conn);
+}
+
+    
+        
+        ?>
+        </div>
+
+
+
 
 </body>
 </html>
