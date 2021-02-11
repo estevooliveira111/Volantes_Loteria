@@ -42,7 +42,7 @@
 
     <h2>Orientação:</h2><br>
 
-        <li>A planilha tem que ser enviada no formato XML:<br> <a class="link_video" href="http">Video para Exemplo<br> </a><br></li>
+        <li>A planilha tem que ser enviada no formato XML:<br> <a class="link_video" href="https://www.youtube.com/">Video para Exemplo<br> </a><br></li>
         <li>Antes de adicionar novos número</li><br>
         <li>Apagar os números antes adicionados</li><br>
     
@@ -87,35 +87,14 @@
 
     include 'conexao.php';
 
-    $arquiivo = $_FILES["arquivo"]["tmp_name"]; 
-    $tamanho = $_FILES["arquivo"]["size"];
-    $tipo    = $_FILES["arquivo"]["type"];
-    $nome  = $_FILES["arquivo"]["name"];
-    $titulo  = $_POST["titulo"];
+    if ($_POST['submit']){
+        echo'lidar com arquivos';
 
-    if ( $arquivo != "none" ){
-    $fp = fopen($arquivo, "rb");
-    $conteudo = fread($fp, $tamanho);
-    $conteudo = addslashes($conteudo);
-    fclose($fp); 
-    
-    if($conn){
+    }else{
+        echo'<br/>Nenhum arquivo enviado<br/><br/>';
 
-        $sql="INSERT INTO arquivos VALUES (0,'$nome','$titulo','$conteudo','$tipo')";
-        mysqli_query($conn,$sql) or die('Erro');
-
-        $resultado_usuario= "INSERT INTO PESSOAS (Nome, tamanho, tipo, arquivo, titulo) VALUES ('$arquiivo','$tamanho','$tipo','$nome','$titulo')";
-        $resultado= mysqli_query($conexao,$resultado_usuario) or die (mysqli_connect_errno());
-        die;
-
-    
-        mysqli_close($conn);
-        header('Location: http://localhost/Volantes_Loteria/dados/');
-    
-    } else{
-      die('Could not connect: ' . mysql_error());
     }
-}
+
     ?>
 
     </div>

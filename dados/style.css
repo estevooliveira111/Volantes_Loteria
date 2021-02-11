@@ -46,9 +46,19 @@
     font-size: 120%;
 }
 
+.arquivocarregado #verde:hover{
+    color: white;
+    background-color: green;
+}
+
 .arquivocarregado #vermelho{
     color: red;
     font-size: 120%;
+}
+
+.arquivocarregado #vermelho:hover{
+    color: white;
+    background-color: red;
 }
 
 #butao{
