@@ -35,3 +35,11 @@ para Lotería <h2><br />
     # create table Pessoas(ID_CLIENTE int not null key auto_increment,NOME char(30),email char(30),NUMEROSESCOLHIDOS float(30),datahora float(24);
 
     # create table Volantes( Valores); 
+
+<h2>Pagina oCULTA</h2>
+
+    # Pegar Números de XML
+
+    # Armazenar em variaveis e colocar 
+
+    #Colocar variaveis no servidor
