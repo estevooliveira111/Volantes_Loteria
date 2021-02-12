@@ -1,31 +1,37 @@
 # Volantes_Loteria
 
-**Sites:**
 
-● Site Usuário:
+  <h2>●Site Usuário: Gerador de Volantes
+para Lotería <h2><br />
 
-    Receber Números do Servidor
-    Enviar Dados (data,hora,nome,e-mail,números escolhidos)
+    # Receber (Volantes) 
 
-    No Banco de dados 
+    # Enviar Dados (Data, Hora, Nome, E-mail, Números Escolhidos)
 
-CREATE DATABASE gerador_de_volantes;
-
-USE gerador_de_volantes;
-
-create table PESSOAS(ID_CLIENTE int not null key auto_increment,NOME char(30),email char(30),NUMEROSESCOLHIDOS float(30),atad float(12),AROH float(12));
-
-create table NUMERO_DE_XML(NUMEROSDOXML DECIMAL); 
+    ## MySQL: 
+            -> Database "gerador_de_volantes"
+                ->tabela "Pessoas" e "Volantes"
+<br />
 
 
-● Login:
+<h2>● Login: (Letra 'l' no titulo da pagina anterior)</h2>
+<br />
 
-    Com JavaScript verifica a senha
+    # Com PHP verifica Usuario e Senha
 
-● Envio de XML:
+<h2>● Envio de XML:</h2><br />
 
-    UM ARQUIVO PHP recebe o arquivo e coloca eles como números e coloca números.
+    # Enviar arquivo XML para DataBase
 
-● Clientes Feitos:
+    # Apagar Arquivo de DataBase
 
-    Mostrar pessoas, ordenados com nome e-mail númerosescolhidos e datas com PHP
+
+<h2>● Clientes Feitos:</h2><br />
+
+    # Loop que mostra volantes feitos pelo ID de cada usuario
+
+<h2>Mysql</h2>
+
+    # create table Pessoas(ID_CLIENTE int not null key auto_increment,NOME char(30),email char(30),NUMEROSESCOLHIDOS float(30),datahora float(24);
+
+    # create table Volantes( Valores); 
