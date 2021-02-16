@@ -56,38 +56,40 @@ session_start();
 
     <div id="caixa" class="arquivocarregado">
 
-        <form action="/dados/apagar/apagar.php" method="post"></form>
+        <form action="http://localhost/Volantes_Loteria/dados/apagar/apagar.php" method="post">
 
             <br><p>Volantes carregados, no servidor <button id="verde">botão</button> em <strong id="verde">VERDE</strong></p><br><br>
         
             <p>Nenhum Volantes no servidor, <button id="vermelho">botão</button> em <strong id="vermelho">VERMELHO</strong></p><br>
 
-
-            <?php
-
-            include 'conexao.php';
-
-            $arquivo = mysqli_query($conn, "SELECT * FROM Numeros");
-
-            if (mysqli_num_rows($arquivo) == '0'){
-
-              echo  '<button id="vermelho">botão</button><br /><br />';
-
-            } else {
-
-                echo '<button id="verde">botão</button><br /><br />';
-
-            }
-
-            ?>
-
-
-
+            
             <button type="submit" class="link" id="butao">Apagar Número</button><br><br>
 
-
-
         </form>
+
+            <div id="caixa">
+
+        
+                <?php
+
+                include 'conexao.php';
+
+                $arquivo = mysqli_query($conn, "SELECT * FROM Numeros");
+
+                if (mysqli_num_rows($arquivo) == '0'){
+
+                  echo  '<button id="vermelho">botão</button><br /><br />';
+
+                } else {
+
+                    echo '<button id="verde">botão</button><br /><br />';
+
+                }
+
+                ?>
+
+            </div>
+
 
     </div>
 
