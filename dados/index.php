@@ -63,13 +63,9 @@ session_start();
             <p>Nenhum Volantes no servidor, <button id="vermelho">botão</button> em <strong id="vermelho">VERMELHO</strong></p><br>
 
             
-            <button type="submit" class="link" id="butao">Apagar Número</button><br><br>
+            <button type="submit" name="Numeros" class="link" id="butao">Apagar Número</button><br><br>
 
-        </form>
-
-            <div id="caixa">
-
-        
+            
                 <?php
 
                 include 'conexao.php';
@@ -78,7 +74,7 @@ session_start();
 
                 if (mysqli_num_rows($arquivo) == '0'){
 
-                  echo  '<button id="vermelho">botão</button><br /><br />';
+                  echo  '<button  id="vermelho">botão</button><br /><br />';
 
                 } else {
 
@@ -88,9 +84,9 @@ session_start();
 
                 ?>
 
-            </div>
 
-
+        </form>
+            
     </div>
 
 
@@ -102,7 +98,8 @@ session_start();
 
 
             <br>
-                <form action="/dados/enviardados/dados.php" name="form" method="post" enctype="multipart/form-data">
+
+                <form action="http://localhost/Volantes_Loteria/dados/enviardados/dados.php" name="form" method="post" enctype="multipart/form-data">
 
                     <input type="hidden" name="enviou" value="1">
                     <input id="file" type="file" name="arquivo" id="Arquivo"><br><br>

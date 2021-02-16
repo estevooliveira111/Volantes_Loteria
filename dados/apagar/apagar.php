@@ -2,19 +2,27 @@
 
 include 'conexao.php';
 
-if($conn){
+$valor=$_POST['Numeros'];
 
-$sql = 'DELETE FROM Numeros';
+if($valor=='Numeros'){
 
-mysqli_query($conn,$sql) or die('Erro ao tentar excluir registro');
+  if($conn){
 
-echo 'Cliente excluído';
+  $sql = 'DELETE FROM Numeros';
 
-mysqli_close($conn);
-header('Location: http://localhost/Volantes_Loteria/dados/');
+  mysqli_query($conn,$sql) or die('Erro ao tentar excluir registro');
+
+  echo 'Cliente excluído';
+
+  mysqli_close($conn);
+  header('Location: http://localhost/Volantes_Loteria/dados/');
 
 } else{
   die('Could not connect: ' . mysql_error());
+}
+
+header('Location: http://localhost/Volantes_Loteria/dados/');
+
 }
 
 ?>
