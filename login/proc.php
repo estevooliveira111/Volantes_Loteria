@@ -1,7 +1,7 @@
 <?php
 
-$usuario='Administrador';
-$senhacerta = 1234;
+$usuario='administrador';
+$senhacerta = 12345;
 
     ## SENHA DIGITADA
     $password = $_POST['password'];

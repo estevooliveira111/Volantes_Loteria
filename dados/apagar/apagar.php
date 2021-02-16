@@ -4,7 +4,7 @@ include 'conexao.php';
 
 if($conn){
 
-$sql = 'DELETE FROM numeros';
+$sql = 'DELETE FROM Numeros';
 
 mysqli_query($conn,$sql) or die('Erro ao tentar excluir registro');
 

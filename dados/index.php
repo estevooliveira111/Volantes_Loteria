@@ -10,12 +10,6 @@ session_start();
     <link rel="stylesheet" href="style.css">
     <title>Loteria</title>
 
-<!--
-    Arquivo carregado para documento "processo.php"  no metodo "method="post"
-        variáveis:
-            Arquivo  tipo:"type="file"", nome:"name="arquivo"""
--->
-
 </head>
 <body>
 
@@ -30,17 +24,22 @@ session_start();
     </div>
 
 
+
+
     <div id="caixa" class="titulo_dos_links">
 
         <div class="letra_link"><br>
 
             <a  class="link" href="http://localhost/Volantes_Loteria/Volantes/">Volantes Gerados</a>
 
-            <a class="link" href="http://localhost/Volantes_Loteria/">Inicio</a><br><br>
+            <a class="link" href="http://localhost/Volantes_Loteria/">Início</a><br><br>
             
         </div>
 
     </div>
+
+
+
 
     <div id="caixa" class="help"><br>
 
@@ -49,26 +48,50 @@ session_start();
         <li>A planilha tem que ser enviada no formato XML:<br> <a class="link_video" href="https://www.youtube.com/">Video para Exemplo<br> </a><br></li>
         <li>Antes de adicionar novos número</li><br>
         <li>Apagar os números antes adicionados</li><br>
-    
-        
 
     </div>
 
+
+
+
     <div id="caixa" class="arquivocarregado">
 
-        <form action="apagar.php" method="post"></form>
+        <form action="/dados/apagar/apagar.php" method="post"></form>
 
             <br><p>Volantes carregados, no servidor <button id="verde">botão</button> em <strong id="verde">VERDE</strong></p><br><br>
         
             <p>Nenhum Volantes no servidor, <button id="vermelho">botão</button> em <strong id="vermelho">VERMELHO</strong></p><br>
 
-            <button id="butao"><a class="link">Botão</a></button><br><br>
 
-            <button type="submit" id="butao"><a class="link" href="apagar.php">Apagar Número</a></button><br><br>
+            <?php
+
+            include 'conexao.php';
+
+            $arquivo = mysqli_query($conn, "SELECT * FROM Numeros");
+
+            if (mysqli_num_rows($arquivo) == '0'){
+
+              echo  '<button id="vermelho">botão</button><br /><br />';
+
+            } else {
+
+                echo '<button id="verde">botão</button><br /><br />';
+
+            }
+
+            ?>
+
+
+
+            <button type="submit" class="link" id="butao">Apagar Número</button><br><br>
+
+
 
         </form>
 
     </div>
+
+
 
 
     <div id="caixa" class="documento">
@@ -84,12 +107,6 @@ session_start();
                     <input class="btn btn-primary" id="linkII" name="enviar" type="submit" value="Enviar">
 
                 </form>
-
-                <div id="caixa">
-
-                    
-
-                </div>
 
             <br>
         </div>
