@@ -13,22 +13,10 @@
     border: solid;
     margin: 4%;
 }
+
 .link{
     border: solid;
     font-size: 130%;
-    text-decoration: none;
-}
-
-.link_video{
-    border: solid;
-    font-size: 130%;
-    text-decoration: none;
-}
-
-.link_video:hover{
-    font-size: 150%;
-    background-color: rgb(51, 36, 24);
-    color: peachpuff;
     text-decoration: none;
 }
 
@@ -36,63 +24,14 @@
     font-size: 55%;
 }
 
-.video{
-    border: solid;
-    margin: 3%;
-}
-
-.arquivocarregado #verde{
-    color: green;
-    font-size: 120%;
-}
-
-.arquivocarregado #verde:hover{
-    color: white;
-    background-color: green;
-}
-
-.arquivocarregado #vermelho{
-    color: red;
-    font-size: 120%;
-}
-
-.arquivocarregado #vermelho:hover{
-    color: white;
-    background-color: red;
-}
-
-#butao{
+#caixad{
     font-size: 200%;
+    border: solid;
+    margin: 4%;
 }
 
-#butao.ativo{
-    background-color: green;
-    color: white;
-}
-
-#butao.desativado{
-    background-color: red;
-    color: white;
-}
-
-.letra_documento #file{
-    font-size: 100%;
-}
-#linkII{
-    font-size: 100%;
-}
-#linkII:hover, #link:hover{
-    color: peachpuff;
+.link:hover,.link:focus{
+    font-size: 200%;
     background-color: rgb(51, 36, 24);
-    font-size: 150%;
-}
-
-.linkII{
-    font-size: 100%;
-}
-.linkII:hover, .link:hover{
     color: peachpuff;
-    background-color: rgb(51, 36, 24);
-    font-size: 150%;
-
 }
