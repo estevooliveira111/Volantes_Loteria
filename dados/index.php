@@ -8,6 +8,8 @@
     <title>Loteria</title>
 
 </head>
+
+
 <body>
 
     <div class="caixa">
@@ -29,15 +31,15 @@
             
     </div>
 
-    <script >
+    <script>
 
-function Mudarestado(el) {
-  var display = document.getElementById(el).style.display;
-  if (display == "none")
-    document.getElementById(el).style.display = 'block';
-  else
-    document.getElementById(el).style.display = 'none';
-}
+    function Mudarestado(el) {
+      var display = document.getElementById(el).style.display;
+      if (display == "none")
+        document.getElementById(el).style.display = 'block';
+      else
+        document.getElementById(el).style.display = 'none';
+    }
     </script>
 
     <div class="caixad">
@@ -98,7 +100,7 @@ function Mudarestado(el) {
         <BR><h1>Fazer Base de Dados:</h1>
         
 
-        <form action="index.php" method="post">
+        <form id="formulario">
 
             <br><fieldset>
 
@@ -108,9 +110,11 @@ function Mudarestado(el) {
 
                     <tr>                
                         <th><label for="linhas">Linhas:</label></th>    
-                        <th><input type="number" name="linhas"><br></th></th>
+                        <th><input id="linhas" type="number"><br></th></th>
+
                         <th><label for="colunas">Colunas:</label></th>
-                        <th><input type="number" name="colunas"></th>
+                        <th><input type="number"></th>
+                        
                         <th><label for="maximo">Máximo:</label></th>
                         <th><input type="number" name="maximo"></th>
                     </tr>
@@ -355,9 +359,11 @@ function Mudarestado(el) {
 
                 </table>
 
+                <input type="text" id="campo">
+
             </fieldset>
 
-            <br><button class="link" onclick="test" type="submit">Gerar</button><br><br>
+            <br><input type="submit" class="link" value="Enviar"><br><br>
 
 
         </form>
@@ -366,13 +372,36 @@ function Mudarestado(el) {
 
     <div class="caixa">
 
-        <?php
-        
-        function test(){
-            echo 'pppp';
-        }
+        <script>
 
-        ?>
+var form = document.getElementById('formulario');
+
+var linhas= document.getElementById('linhas');
+var
+var
+var
+var
+var
+var
+var
+var
+var
+var
+var
+var
+var
+
+var campo = document.getElementById('campo');
+
+form.addEventListener('submit', function(e) {
+    // alerta o valor do campo
+    alert(campo.value);
+
+    // impede o envio do form
+    e.preventDefault();
+});
+
+        </script>
 
     </div>
 
