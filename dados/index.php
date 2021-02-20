@@ -101,7 +101,7 @@
         <BR><h1>Fazer Base de Dados:</h1>
         
 
-        <form action="index.php" method="post" >
+        <form action="dados.php" method="post" >
 
             <br><fieldset>
 
@@ -111,10 +111,10 @@
 
                     <tr>                
                         <th><label>Linhas:</label></th>    
-                        <th><input id="linhas" type="number"><br></th></th>
+                        <th><input class="linhas" id="linhas" type="number"><br></th></th>
 
                         <th><label>Colunas:</label></th>
-                        <th><input id="colunas" type="number"></th>
+                        <th><input class="colunas" id="colunas" type="number"></th>
                  
                     </tr>
 
@@ -362,14 +362,22 @@
 
             <br><input type="submit" class="link" value="Enviar"><br><br>
 
-
         </form>
 
     </div>
 
-    <?
+    <?php
+
+if (isset($_POST['submit']){
+
+$linhas=$_POST['linhas'];
+
+$colunas= $_POST['colunas'];
+
+echo ("$linhas e $colunas");
+
+}
     
-        
     ?>
 
 </body>
