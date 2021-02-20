@@ -366,22 +366,38 @@
 
     </div>
 
-
     <?php
 
 
 if(isset($_POST["submit"])){
 
-    $linhas=$_POST['linhas'];
-    $colunas=$_POST['colunas'];
+    // Pegar variaveis do formulário
 
-    $tabela = print ("<table></table>");
+    $l=$_POST['linhas'];
+    $c=$_POST['colunas'];
+
+    $linhas = intval($l);
+    $colunas = intval($c);
+
+    $tabela = print_r("<table></table>");
     // c elula das t abela=ct
     $ct = print ("<tr></tr>");
 
-    $a=$tabela*$linhas;
+    $a=$tabela*($linhas);
+
+
+
+    // Parter de exibição do para usuario
+
+    echo('<div class="caixa" >');
+
+
 
     echo ("$a");
+
+
+    
+    echo("</div>");
 
 
 
