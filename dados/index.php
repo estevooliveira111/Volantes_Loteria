@@ -31,7 +31,7 @@
             
     </div>
 
-    <script>
+<script>
 
     function Mudarestado(el) {
       var display = document.getElementById(el).style.display;
@@ -40,8 +40,8 @@
       else
         document.getElementById(el).style.display = 'none';
     }
-    
-    </script>
+
+</script>
 
     <div class="caixad">
 
@@ -101,7 +101,7 @@
         <BR><h1>Fazer Base de Dados:</h1>
         
 
-        <form action="dados.php" method="post" >
+        <form action="index.php" method="post" >
 
             <br><fieldset>
 
@@ -111,10 +111,10 @@
 
                     <tr>                
                         <th><label>Linhas:</label></th>    
-                        <th><input class="linhas" id="linhas" type="number"><br></th></th>
+                        <th><input class="linhas" name="linhas" type="number"><br></th></th>
 
                         <th><label>Colunas:</label></th>
-                        <th><input class="colunas" id="colunas" type="number"></th>
+                        <th><input class="colunas" name="colunas" type="number"></th>
                  
                     </tr>
 
@@ -360,25 +360,36 @@
 
             </fieldset>
 
-            <br><input type="submit" class="link" value="Enviar"><br><br>
+            <br> <button value="Submit" name="submit" type="submit">Enviar</button> <br><br>
 
         </form>
 
     </div>
 
+
     <?php
 
-if (isset($_POST['submit']){
 
-$linhas=$_POST['linhas'];
+if(isset($_POST["submit"])){
 
-$colunas= $_POST['colunas'];
+    $linhas=$_POST['linhas'];
+    $colunas=$_POST['colunas'];
 
-echo ("$linhas e $colunas");
+    $tabela = print ("<table></table>");
+    // c elula das t abela=ct
+    $ct = print ("<tr></tr>");
 
-}
-    
+    $a=$tabela*$linhas;
+
+    echo ("$a");
+
+
+
+
+}    
     ?>
+
+    
 
 </body>
 </html>
