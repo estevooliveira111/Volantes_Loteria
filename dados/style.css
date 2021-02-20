@@ -8,7 +8,7 @@
 }
 
 /* colocar no site */
-#caixa{
+.caixa{
     font-size: 300%;
     border: solid;
     margin: 4%;
@@ -24,14 +24,14 @@
     font-size: 55%;
 }
 
-#caixad{
+.caixad{
     font-size: 200%;
     border: solid;
     margin: 4%;
 }
 
-.link:hover,.link:focus{
-    font-size: 200%;
+.link:hover{
+    font-size: 180%;
     background-color: rgb(51, 36, 24);
     color: peachpuff;
 }
