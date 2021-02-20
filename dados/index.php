@@ -40,6 +40,7 @@
       else
         document.getElementById(el).style.display = 'none';
     }
+    
     </script>
 
     <div class="caixad">
@@ -100,7 +101,7 @@
         <BR><h1>Fazer Base de Dados:</h1>
         
 
-        <form id="formulario">
+        <form action="index.php" method="post" >
 
             <br><fieldset>
 
@@ -109,17 +110,15 @@
                 <legend> Modelo </legend><br>
 
                     <tr>                
-                        <th><label for="linhas">Linhas:</label></th>    
+                        <th><label>Linhas:</label></th>    
                         <th><input id="linhas" type="number"><br></th></th>
 
-                        <th><label for="colunas">Colunas:</label></th>
-                        <th><input type="number"></th>
-                        
-                        <th><label for="maximo">Máximo:</label></th>
-                        <th><input type="number" name="maximo"></th>
+                        <th><label>Colunas:</label></th>
+                        <th><input id="colunas" type="number"></th>
+                 
                     </tr>
 
-            </table>
+            </table><br>
 
             <table border="2">
 
@@ -359,8 +358,6 @@
 
                 </table>
 
-                <input type="text" id="campo">
-
             </fieldset>
 
             <br><input type="submit" class="link" value="Enviar"><br><br>
@@ -370,40 +367,10 @@
 
     </div>
 
-    <div class="caixa">
-
-        <script>
-
-var form = document.getElementById('formulario');
-
-var linhas= document.getElementById('linhas');
-var
-var
-var
-var
-var
-var
-var
-var
-var
-var
-var
-var
-var
-
-var campo = document.getElementById('campo');
-
-form.addEventListener('submit', function(e) {
-    // alerta o valor do campo
-    alert(campo.value);
-
-    // impede o envio do form
-    e.preventDefault();
-});
-
-        </script>
-
-    </div>
+    <?
+    
+        
+    ?>
 
 </body>
 </html>
