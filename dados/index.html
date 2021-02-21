@@ -101,9 +101,9 @@
         <BR><h1>Fazer Base de Dados:</h1>
         
 
-        <form id="formulario" method="post" >
+        <form id="formulario" method="post"><br>
 
-            <br><fieldset>
+            <fieldset>
 
             <table border="2">
 
@@ -111,10 +111,12 @@
 
                     <tr>                
                         <th><label>Linhas:</label></th>    
-                        <th><input class="linhas" id="linha" name="linhas" type="number"><br></th></th>
+
+                        <th><input class="linhas" required="required" id="linha" name="linhas" type="number"><br></th></th>
 
                         <th><label>Colunas:</label></th>
-                        <th><input class="colunas" id="coluna" name="colunas" type="number"></th>
+
+                        <th><input class="colunas" required="required" id="coluna" name="colunas" type="number"></th>
                  
                     </tr>
 
@@ -367,20 +369,44 @@
     </div>
 
     <div class="caixa">
+        
+        <table border="2">
+
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+
+        </table>
 
         <script>
 
-        var linha = document.getElementById('linha');
-        var coluna = document.getElementById('coluna');
+            // Variaveis
 
-        form.addEventListener('submit', function(e) {
+            var linha = document.getElementById('linha');
+            var coluna = document.getElementById('coluna');
 
-        // alerta o valor do campo
-        alert(campo.value);
 
-        // impede o envio do form
-        e.preventDefault();
-        });
+            // Funções
+
+            this.gerartabela = function () {
+
+                var tabela = document.createElement("table")
+                var linha = document.createElement("tr")
+                var colunas = document.createElement("td")
+                
+            }
+
+            
 
         </script>
 
