@@ -101,7 +101,7 @@
         <BR><h1>Fazer Base de Dados:</h1>
         
 
-        <form action="index.php" method="post" >
+        <form id="formulario" method="post" >
 
             <br><fieldset>
 
@@ -111,10 +111,10 @@
 
                     <tr>                
                         <th><label>Linhas:</label></th>    
-                        <th><input class="linhas" name="linhas" type="number"><br></th></th>
+                        <th><input class="linhas" id="linha" name="linhas" type="number"><br></th></th>
 
                         <th><label>Colunas:</label></th>
-                        <th><input class="colunas" name="colunas" type="number"></th>
+                        <th><input class="colunas" id="coluna" name="colunas" type="number"></th>
                  
                     </tr>
 
@@ -366,46 +366,64 @@
 
     </div>
 
-    <?php
+    <div class="caixa">
+
+        <script>
+
+        var linha = document.getElementById('linha');
+        var coluna = document.getElementById('coluna');
+
+        form.addEventListener('submit', function(e) {
+
+        // alerta o valor do campo
+        alert(campo.value);
+
+        // impede o envio do form
+        e.preventDefault();
+        });
+
+        </script>
+
+    </div>
+
+    <!-- <?php
+
+// if(isset($_POST["submit"])){
+
+//     // Pegar variaveis do formulário
+
+//     $l=$_POST['linhas'];
+//     $c=$_POST['colunas'];
+
+//     $linhas = intval($l);
+//     $colunas = intval($c);
+
+//     $tabela = print_r("<table></table>");
+//     // c elula das t abela=ct
+//     $ct = print ("<tr></tr>");
+
+//     $a=$tabela*($linhas);
 
 
-if(isset($_POST["submit"])){
 
-    // Pegar variaveis do formulário
+//     // Parter de exibição do para usuario
 
-    $l=$_POST['linhas'];
-    $c=$_POST['colunas'];
-
-    $linhas = intval($l);
-    $colunas = intval($c);
-
-    $tabela = print_r("<table></table>");
-    // c elula das t abela=ct
-    $ct = print ("<tr></tr>");
-
-    $a=$tabela*($linhas);
+//     echo('<div class="caixa" >');
 
 
 
-    // Parter de exibição do para usuario
-
-    echo('<div class="caixa" >');
-
-
-
-    echo ("$a");
+//     echo ("$a");
 
 
     
-    echo("</div>");
+//     echo("</div>");
 
 
 
 
-}    
-    ?>
+// }    
 
-    
+    ?> -->
 
 </body>
 </html>
