@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/dados/script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://localhost/Volantes_Loteria/base/style/dados.css">
     <title>Loteria</title>
 
 </head>
@@ -25,11 +24,23 @@
 
     <div class="caixa">
 
-        <br><a class="link" href="http://localhost/Volantes_Loteria/Volantes/">Volantes Gerados</a>
+        <br><a class="link" href="http://localhost/Volantes_Loteria/login/dados/Volantes/index.php">Volantes Gerados</a>
 
         <a class="link" href="http://localhost/Volantes_Loteria/">Início</a><br><br>
             
     </div>
+
+
+    <form class="caixa" action="/base/php/" method="post"><br>
+
+        <label for="arquivo">Enviar Arquivo: </label><br>
+
+        <input name="arquivo" style="height: 100%;" class="" type="file" name="" id=""><br><br>
+        
+        <button class="link" type="submit">Enviar</button><br><br>
+
+
+    </form>
 
 <script>
 
@@ -48,8 +59,6 @@
                 <br><h2>Base de Dados Mega Sena:</h2><br>
                 <button type="button" onclick="Mudarestado('minhaDivI')" class="link">Exibir Dados Existentes</button>
                 <button type="button" onclick="Mudarestado('minhaDivII')" class="link">Fazer Base de Dados</button><br><br>
-
-        </form> 
 
     </div>    
 
@@ -362,7 +371,7 @@
 
             </fieldset>
 
-            <br> <button value="Submit" name="submit" type="submit">Enviar</button> <br><br>
+            <br> <button value="Submit" class="link" name="submit" type="submit">Enviar</button> <br><br>
 
         </form>
 

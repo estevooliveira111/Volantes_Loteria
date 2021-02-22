@@ -20,7 +20,7 @@ if (mysqli_connect_errno() != 0) {
             $resultado= mysqli_query($conexao,$resultado_usuario) or die (mysqli_connect_errno());
             die;
 
-            header("Location: http://localhost/Volantes_Loteria/login/");
+            header("Location: http://localhost/Volantes_Loteria/");
 
 
         }
