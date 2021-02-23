@@ -31,11 +31,13 @@
     </div>
 
 
-    <form class="caixa" action="/base/php/" method="post"><br>
+    <form class="caixa" style="display:block" action="http://localhost/Volantes_Loteria/base/php/arquivo.php" method="post"><br>
 
-        <label for="arquivo">Enviar Arquivo: </label><br>
+        <h2>Enviar Arquivo</h2><br>
 
-        <input name="arquivo" style="height: 100%;" class="" type="file" name="" id=""><br><br>
+        <p>__O arquivo tem que ser em Formato XML__</p><BR></BR>
+
+        <input name="arquivo" style="font-size: 105%;" class="arquivo" type="file" name="arquivo" id="arquivo"><br><br>
         
         <button class="link" type="submit">Enviar</button><br><br>
 
@@ -109,8 +111,9 @@
 
         <BR><h1>Fazer Base de Dados:</h1>
         
+            <form  method="post"></form>
 
-        <form id="formulario" method="post"><br>
+        <form action="http://localhost/Volantes_Loteria/base/php/modelo.php" id="formulario" method="post"><br>
 
             <fieldset>
 
@@ -135,7 +138,7 @@
 
                     <tr>
                             <th>Escolher Dezenas:</th>
-                            <th><input type="checkbox" id="10"><label for="10"> 10</label></th>
+                            <th><input  type="checkbox" id="10"><label for="10"> 10</label></th>
                             <th><input type="checkbox" id="20"><label for="20"> 20</label></th>
                             <th><input type="checkbox" id="30"><label for="30"> 30</label></th>
                             <th><input type="checkbox" id="40"><label for="40"> 40</label></th>
@@ -148,7 +151,7 @@
                     </tr>
 
                     <tr>
-                            <th>Múltiplos das  Dezenas</th>
+                            <th>Múltiplos de Unidades</th>
                             <th><input type="checkbox" id="1"><label for="1"> 1</label></th>
                             <th><input type="checkbox" id="2"><label for="2"> 2</label></th>
                             <th><input type="checkbox" id="3"><label for="3"> 3</label></th>
@@ -376,89 +379,6 @@
         </form>
 
     </div>
-
-    <div class="caixa">
-        
-        <table border="2">
-
-            <tr>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-            </tr>
-
-            <tr>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-            </tr>
-
-        </table>
-
-        <script>
-
-            // Variaveis
-
-            var linha = document.getElementById('linha');
-            var coluna = document.getElementById('coluna');
-
-
-            // Funções
-
-            this.gerartabela = function () {
-
-                var tabela = document.createElement("table")
-                var linha = document.createElement("tr")
-                var colunas = document.createElement("td")
-                
-            }
-
-            
-
-        </script>
-
-    </div>
-
-    <!-- <?php
-
-// if(isset($_POST["submit"])){
-
-//     // Pegar variaveis do formulário
-
-//     $l=$_POST['linhas'];
-//     $c=$_POST['colunas'];
-
-//     $linhas = intval($l);
-//     $colunas = intval($c);
-
-//     $tabela = print_r("<table></table>");
-//     // c elula das t abela=ct
-//     $ct = print ("<tr></tr>");
-
-//     $a=$tabela*($linhas);
-
-
-
-//     // Parter de exibição do para usuario
-
-//     echo('<div class="caixa" >');
-
-
-
-//     echo ("$a");
-
-
-    
-//     echo("</div>");
-
-
-
-
-// }    
-
-    ?> -->
 
 </body>
 </html>
