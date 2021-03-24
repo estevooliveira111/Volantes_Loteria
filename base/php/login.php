@@ -13,11 +13,11 @@ $senhacerta = 12345;
         ##CRIA A SESSÃO
         $_SESSION['password'] = $password;
         ##REDIRECIONA
-        header("Location: http://localhost/Volantes_Loteria/login/dados/");
+        header("Location: https://estevooliveira111.github.io/Volantes_Loteria/login/dados/");
 
     }else{
         ##ERRO
-        header("Location: http://localhost/Volantes_Loteria/login/index.html");
+        header("Location: https://estevooliveira111.github.io/Volantes_Loteria/login/index.html");
 
     }
 
