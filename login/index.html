@@ -17,13 +17,30 @@
 
             <form enctype="multipart/form-data" method="GET" action="https://estevooliveira111.github.io/Volantes_Loteria/base/php/login.php"><br>
 	
-        	    <input type="text" name="usuario" placeholder="Usuario"><br><br>
+                <input type="text" placeholder="Nome de usuário" name="usuario"><br><br>
             
-                <input type="password" name="password" placeholder="Senha"><br><br>
+                <input type="password" placeholder="Senha" name="senha"><br><br>
 	        
-                <input type="submit" name="env">
+                <input id="enviar" type="button" onclick="Login()" class="botao" value="Login">
 
             </form>
+
+            <script>
+
+            function Login() {
+                var done=0;
+                var usuario = document.getElementsByName('usuario')[0].value;
+                usuario=usuario.toLowerCase();
+                var senha= document.getElementsByName('senha')[0].value;
+                seha=senha.toLowerCase();
+                if (usuario=="admin" && senha=="admin") {
+                  window.location="https://estevooliveira111.github.io/Volantes_Loteria/login/dados/";
+                  done=1;
+                }
+                if (done==0) { alert("Dados incorretos, tente novamente"); }
+              }
+
+            </script>
 
 <br>
 <br>
