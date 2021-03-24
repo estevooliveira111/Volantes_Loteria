@@ -4,9 +4,9 @@ $usuario='administrador';
 $senhacerta = 12345;
 
     ## SENHA DIGITADA
-    $password = $_POST['password'];
+    $password = $_GET['password'];
 
-    $usuariocerto=$_POST['usuario'];
+    $usuariocerto=$_GET['usuario'];
 
     ##VERIFICA SE A SENHA É A MESMA.
     if(( $password == $senhacerta )&&( $usuariocerto == $usuario)) {
