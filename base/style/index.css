@@ -14,15 +14,22 @@ margin: 4%;
 font-size: 2em;
 border: solid;
 }
+
+
 /* link do titulo*/
+
 .link{
 text-decoration: none;
 }
+
+
 /* formulario */
 .II{
 margin: 4%;
 border: solid;
 }
+
+
 /* formulario nome e Email */
 .II_i{
 margin: 4%;
@@ -35,31 +42,15 @@ font-size: 300%;
 .II_i label{
 font-size: 350%;
 }
+
+
 /* Numeros digitados */
 .II_ii{
 margin: 4%;
 border: solid;
 }
-.tela{
-width: 90%;
-font-size: 500%;
-}
-/* tabela */
-.tabela{
-width: 90%;
-}
-table{
-margin: 4%;
-white-space: nowrap;
 
-}
-table input{
-font-size: 265%;
-white-space: normal;
-}
-td{
-margin: 4%;
-}
+
 /* botões da tabela */
 
 #um:hover{
@@ -71,16 +62,13 @@ td{
 float: left;
 }
 
-#um:focus,#dois:focus,#tres:focus,#quatro:focus,#cinco:focus,#seis:focus,#apagar:focus{
-background-color: rgb(51, 36, 24);
-color: peachpuff;
-font-size: 280%;
-}
 
 /* Todos botões */
+
 .botão{
 font-size: 200%;
 }
+
 .botão:hover,.botão:focus{
 background-color: rgb(51, 36, 24);
 color: peachpuff;
