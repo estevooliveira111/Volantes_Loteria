@@ -1,0 +1,67 @@
+/* Todo site */
+
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(51, 36, 24);
+    background-color: peachpuff;
+    text-align: center;
+    font-size: 120%;
+}
+
+
+
+/* Links */
+
+a:focus,a:hover{
+    color: peachpuff;
+    padding: 5%;
+    background-color:  rgb(51, 36, 24);
+}
+
+a{text-decoration: none;}
+
+
+
+/* Titulo */
+
+
+h1{
+    font-size: 250%;
+    align-items: center;
+    width: 100%;   
+}
+
+.I{
+    margin: 4%;
+    border: solid;
+}
+
+/* Login Nome */
+
+form{
+    margin: 4%;
+    border: solid;
+}
+
+/* Formulário */
+
+.III{
+    margin: 4%;
+    border: solid;
+}
+
+table{
+    margin: 4%;
+    width: 80%;
+}
+
+tr, th, .link{
+    display: flex;
+    width: 80%;
+}
+
+tr a{
+    border: solid;
+    margin: 2%;
+}
