@@ -71,7 +71,7 @@ if (!$conn) {
     echo "Sucesso: Sucesso ao conectar-se com a base de dados MySQL." . PHP_EOL;
 }
 
-    // p/ passar para outra pagina --> include '';
+// p/ passar para outra pagina --> include '';
 
 // dados do site
 

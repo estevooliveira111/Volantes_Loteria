@@ -15,8 +15,7 @@
     margin: 0;
 }
 
-.base{
-    border: solid;
+table{
     margin: 4%;
 }
 
@@ -25,66 +24,58 @@ h1{
     margin: 4%;
     font-size: 400%;
 }
-
-li{
-    list-style: none;
-}
     </style>
 
 </head>
 
 <body>
 
+<div class="titulo">
 
     <h1 class="Title">Volantes Gerados</h1>
 
-    <div class="base">
-        <?php
+</div>
 
+<div class="bloco">
 
-include 'conexao.php';
+    <table border="2" >
 
+    <!-- ('tr' linha) -->
+    <!-- ('th' celula) -->
 
-$result_usuario = "SELECT * FROM Pessoas ORDER BY id DESC";
-$resultado_usuario = mysqli_query($conn, $result_usuario);
+    <?php
 
-//Verificar se encontrou resultado na tabela "usuarios"
-if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
-	while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
-		echo $row_usuario['nome'] . "<br>";
-            $query=sprintf("SELECT nome, email, Numerosescolhidos, Datadiahora FROM Pessoas");
-            $dados = mysqli_query($query, $con) or die(mysql_error());
-            mysqli_select_db($dbname, $con);
-                // cria a instrução SQL que vai selecionar os dados
-                $query = sprintf("SELECT nome, email, Numerosescolhidos, Datadiahora FROM Pessoas");
-                // executa a query
-                $dados = mysqli_query($query, $con) or die(mysql_error());
-                // transforma os dados em um array
-                $linha = mysqli_fetch_assoc($dados);
-                // calcula quantos dados retornaram
-                $total = mysqli_num_rows($dados);
+    include 'conexao.php';
+
+    $dados = sprintf("SELECT * FROM xxx");
     
-    }
+    $dados = mysqli_query($conn, $dados);
+
+    while ($row = mysqli_fetch_array( $dados )) 
+{ 
+
+    echo '<tr>';
+
+    echo '<th>Nome<th />';
+    echo '<th>';
+    print $row['nome'];
+    echo '<th />';
+
+    echo '<th>Email<th />';
+    echo '<th>';
+    print $row['email'];
+    echo '<th />';
+
+
+    echo '<tr />';
+      
 }
 
+    ?>
+        
+    </table>
 
-	// se o número de resultados for maior que zero, mostra os dados
-	if($total > 0) {
-		do {
-?>
-			<li><?=$linha['nome']?> / <?=$linha['Numerosescolhidos
-            ']?></li>
-<?php
-		// finaliza o loop que vai mostrar os dados
-		}while($linha = mysql_fetch_assoc($dados));
-	// fim do if
-	}
-?>
-
-        </div>
-
-
-
+</div>
 
 </body>
 </html>
