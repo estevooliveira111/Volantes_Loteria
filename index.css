@@ -44,6 +44,10 @@ form{
     border: solid;
 }
 
+input{
+    margin: 90;
+}
+
 /* Formulário */
 
 .III{
