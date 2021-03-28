@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://estevooliveira111.github.io/Volantes_Loteria/base/style/login.css">
+    <link rel="stylesheet" href="http://localhost/Volantes_Loteria/base/style/login.css">
     <title>Login</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <br>
 
     <ul>
-        <li><a style="border: solid rgb(51, 36, 24); text-decoration-style: none;" href="https://estevooliveira111.github.io/Volantes_Loteria/">Voltar Página Inicial</a></li>
+        <li><a style="border: solid rgb(51, 36, 24); text-decoration-style: none;" href="http://localhost/Volantes_Loteria/">Voltar Página Inicial</a></li>
     </ul>
 
 
@@ -21,7 +21,7 @@
 
         <h1>Login:</h1>
 
-            <form enctype="multipart/form-data" method="GET" action="https://estevooliveira111.github.io/Volantes_Loteria/base/php/login.php"><br>
+            <form enctype="multipart/form-data" method="GET" action="http://localhost/Volantes_Loteria/base/php/login.php"><br>
 	
                 <input type="text" placeholder="Nome de usuário" name="usuario"><br><br>
             
@@ -40,7 +40,7 @@
                 var senha= document.getElementsByName('senha')[0].value;
                 seha=senha.toLowerCase();
                 if (usuario=="admin" && senha=="admin") {
-                  window.location="https://estevooliveira111.github.io/Volantes_Loteria/login/dados/";
+                  window.location="http://localhost/Volantes_Loteria/login/dados/";
                   done=1;
                 }
                 if (done==0) { alert("Dados incorretos, tente novamente"); }
