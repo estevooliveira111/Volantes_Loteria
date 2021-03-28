@@ -31,15 +31,15 @@
     </div>
 
 
-    <form class="caixa" style="display:block" action="https://estevooliveira111.github.io/Volantes_Loteria/base/php/arquivo.php" method="post"><br>
+    <form class="caixa" style="display:block" action="http://localhost/Volantes_Loteria/base/php/arquivo.php" method="post"><br>
 
         <h2>Enviar Arquivo</h2><br>
 
-        <p>__O arquivo tem que ser em Formato XML__</p><BR></BR>
+        <p>__O arquivo tem que ser em Formato XML__</p><br><br>
 
         <input name="arquivo" style="font-size: 105%;" class="arquivo" type="file" name="arquivo" id="arquivo"><br><br>
         
-        <button onclick="alerta()" class="link" type="#">Enviar</button><br><br>
+        <button class="link" type="#">Enviar</button><br><br>
 
 
     </form>
@@ -52,23 +52,19 @@
 
         window.onload = function adicionarXML() {
 
-            if(window.File && window.FileReader && window.FileList && window.Blob) 
+            if(window.File && window.FileReader && window.FileList && window.Blob);
 
         };
 
+        function Mudarestado(el) {
+        var display = document.getElementById(el).style.display;
+        if (display == "none")
+            document.getElementById(el).style.display = 'block';
+        else
+            document.getElementById(el).style.display = 'none';
+        }
+
     </script>
-
-<script>
-
-    function Mudarestado(el) {
-      var display = document.getElementById(el).style.display;
-      if (display == "none")
-        document.getElementById(el).style.display = 'block';
-      else
-        document.getElementById(el).style.display = 'none';
-    }
-
-</script>
 
     <div class="caixad">
 
@@ -127,7 +123,7 @@
         
             <form  method="post"></form>
 
-        <form action="http://localhost/Volantes_Loteria/base/php/modelo.php" id="formulario" method="post"><br>
+        <form action="http://localhost/Volantes_Loteria/base/php/" id="formulario" method="post"><br>
 
             <fieldset>
 
