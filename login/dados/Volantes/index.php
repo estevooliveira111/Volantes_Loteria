@@ -15,10 +15,6 @@
     margin: 0;
 }
 
-table{
-    margin: 4%;
-}
-
 h1{
     border:solid;
     margin: 4%;
@@ -38,7 +34,7 @@ h1{
 
 <div class="bloco">
 
-    <table border="2" >
+    <table border="1" >
 
     <!-- ('tr' linha) -->
     <!-- ('th' celula) -->
@@ -52,23 +48,29 @@ h1{
     $dados = mysqli_query($conn, $dados);
 
     while ($row = mysqli_fetch_array( $dados )) 
+    
 { 
 
     echo '<tr>';
 
     echo '<th>Nome<th />';
+    echo '<th>Email<th />';
+
+    echo '<tr />';
+
+
+    echo '<tr>';
+
     echo '<th>';
     print $row['nome'];
     echo '<th />';
-
-    echo '<th>Email<th />';
+   
     echo '<th>';
     print $row['email'];
     echo '<th />';
 
-
     echo '<tr />';
-      
+
 }
 
     ?>
