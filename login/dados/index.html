@@ -33,13 +33,27 @@
 
     <form class="caixa" style="display:block" action="http://localhost/Volantes_Loteria/base/php/arquivo.php" method="post"><br>
 
-        <h2>Enviar Arquivo</h2><br>
+        <h2>Enviar Números</h2><br>
 
-        <p>__O arquivo tem que ser em Formato XML__</p><br><br>
+        <div style="border: solid 2%;">
 
-        <input name="arquivo" style="font-size: 105%;" class="arquivo" type="file" name="arquivo" id="arquivo"><br><br>
-        
+        <p>__O arquivo em Formato XML__</p><br><br>
+
+        <input style="font-size: 105%;" class="arquivo" type="file" name="arquivo">
+
         <button class="link" type="#">Enviar</button><br><br>
+
+        </div>
+
+        <div style="border: solid 2%;">
+
+        <p>__O arquivo em Link__</p><br><br>
+
+        <input style="font-size: 105%;" type="url" name="link">
+
+        <button class="link" type="#">Enviar</button><br><br>
+
+        </div>
 
 
     </form>

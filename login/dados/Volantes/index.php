@@ -34,7 +34,7 @@ h1{
 
 <div class="bloco">
 
-    <table border="1" >
+    <table border="2" >
 
     <!-- ('tr' linha) -->
     <!-- ('th' celula) -->
@@ -47,8 +47,8 @@ h1{
     
     $dados = mysqli_query($conn, $dados);
 
-    while ($row = mysqli_fetch_array( $dados )) 
-    
+    while ($row = mysqli_fetch_array($dados)) 
+
 { 
 
     echo '<tr>';
