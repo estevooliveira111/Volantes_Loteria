@@ -47,9 +47,7 @@ h1{
     
     $dados = mysqli_query($conn, $dados);
 
-    while ($row = mysqli_fetch_array($dados)) 
-
-{ 
+    while ($row = mysqli_fetch_array($dados)) { 
 
     echo '<tr>';
 
