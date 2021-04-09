@@ -41,7 +41,8 @@ h1{
 
     <?php
 
-    include 'conexao.php';
+    include 'conexao.php';                echo  '';
+
 
     $dados = sprintf("SELECT * FROM xxx");
     
